@@ -1,0 +1,122 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Developer Signup Overlay -->
+<div id="dev-overlay" class="dev-overlay">
+  
+	<div class="dev-overlay-container">
+
+		<div class="dev-signup-form">
+			<div class="dev-signup-title">
+				<img src="{{asset('images/logo-icon.png')}}" class="logo-icon">
+				<h2>Developer Sign Up</h2>
+			</div>
+			<a href="#close" class="icon  icon--close"></a>
+			{{zone('main')|raw}}
+			<p class="dev-signup-text">Have an account? <a href="http://www.basekit.com/landing/login">Login</a> here.</p>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Sidebar Pullout Menu -->
+{% include "includes/sidebar-pullout.twig" %}
+
+<!-- Page Content -->
+<section id="page-content" class="page-content">
+
+	<section class="top-section">
+		
+		<div class="container">
+
+			<!-- Theme Header -->
+			{% include "includes/header.twig" %}
+
+			<!-- Page Intro -->
+			<div class="page-intro">
+
+				<div class="container">
+
+					{{widget('content', 'page-intro_title', {"content":'<h1>Welcome to the BaseKit Developer Portal.</h1><p><a href="http://www.basekit.com" target="_blank" class="orange">BaseKit</a> is proud to reveal our new Template Development Kit - making custom sites easier to build and publish. Our site editor includes 100+ professionally designed templates designed all resolutions. Each design is quick toload and easy to navigate. You can change the appearance of the site at any time by customizing the colors, fonts and layout or swap to a different template at no extra cost.</p>'})|raw}}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<!-- End Top Section -->
+
+	<!-- Feature Blocks -->
+	<section class="feature-blocks">
+
+		<!-- Documentation -->
+		<article class="feature-item  feature-item--blue">
+			
+			{{widget('content', 'feature-item_documentation_title', {"content":'<h2>Documentation</h2>'})|raw}}
+			<hr class="divider">
+			{{widget('content', 'feature-item_documentation_description', {"content":'<p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor incidid.</p>'})|raw}}
+			<a href="http://docs.basekit.com" target="_blank" class="button  white  button--blue">View documentation</a>
+
+		</article>
+
+		<!-- Developer Sign Up -->
+		<article class="feature-item  feature-item--green">
+			
+			{{widget('content', 'feature-item_dev-signup_title', {"content":'<h2>Developer Sign Up</h2>'})|raw}}
+			<hr class="divider">
+			{{widget('content', 'feature-item_dev-signup_description', {"content":'<p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor incidid.</p>'})|raw}}
+			<a href="#dev-overlay" class="button  white  button--green">Create an account</a>
+
+		</article>
+
+		<!-- Editor Tour -->
+		<article class="feature-item  feature-item--orange">
+			
+			{{widget('content', 'feature-item_editor-tour_title', {"content":'<h2>Editor Tour</h2>'})|raw}}
+			<hr class="divider">
+			{{widget('content', 'feature-item_editor-tour_description', {"content":'<p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor incidid.</p>'})|raw}}
+			<a href="http://www.basekit.com/tour" target="_blank" class="button  white  button--orange">View editor tour</a>
+
+		</article>
+
+		<!-- Knowledge Forum -->
+		<article class="feature-item  feature-item--blue">
+			
+			{{widget('content', 'feature-item_knowledge_title', {"content":'<h2>Knowledge Forum</h2>'})|raw}}
+			<hr class="divider">
+			{{widget('content', 'feature-item_knowledge_description', {"content":'<p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor incidid.</p>'})|raw}}
+			<a href="http://knowledge.basekit.com" target="_blank" class="button  white  button--blue">View knowledge forum</a>
+
+		</article>
+
+		<!-- Developer Blog -->
+		<article class="feature-item  feature-item--green">
+			
+			{{widget('content', 'feature-item_dev-blog_title', {"content":'<h2>Developer Blog</h2>'})|raw}}
+			<hr class="divider">
+			{{widget('content', 'feature-item_dev-blog_description', {"content":'<p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor incidid.</p>'})|raw}}
+			<a href="http://developers.basekit.com/blog" target="_blank" class="button  white  button--green">View developer blog</a>
+
+		</article>
+
+		<!-- Theme Viewer Tour -->
+		<article class="feature-item  feature-item--orange">
+			
+			{{widget('content', 'feature-item_theme-viewer_title', {"content":'<h2>Theme Viewer Tour</h2>'})|raw}}
+			<hr class="divider">
+			{{widget('content', 'feature-item_theme-viewer_description', {"content":'<p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor incidid.</p>'})|raw}}
+			<a href="#" target="_blank" class="button  white  button--orange">View theme viewer tour</a>
+
+		</article>
+
+	</section>
+	<!-- End Feature Blocks -->
+
+</section>
+<!-- End Page Content -->
+
+{% endblock %}
