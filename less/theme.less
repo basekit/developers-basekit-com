@@ -1,0 +1,453 @@
+// ------------------------------
+// BaseKit Baseplate: CSS > Theme
+// ------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// . #Page Content
+// . #Header
+// . #Page Intro
+// . #Feature Blocks
+// . #Buttons
+// . #Forms
+
+
+
+
+// -----------------------------
+// . #Page Content
+// -----------------------------
+
+.container {
+	max-width: 1400px;
+}
+
+.page-content {
+	width: 100%; // Fallback
+	width: calc(~"100% - 70px");
+	position: relative;
+   	left: 70px;
+
+   	@media @desktop {
+        left: 60px;
+    }
+
+    @media @mobile {
+    	top: 38px;
+    	left: 0;
+    	width: 100%;
+	}
+
+   	.open & {
+   		left: 270px;
+   		.transition(0.3s);
+
+	   	@media @desktop {
+	   		left: 260px;
+	    }
+
+	    @media @mobile {
+	    	left: 210px;
+	    }
+   	}
+}
+
+
+
+
+// -----------------------------
+// . #Header
+// -----------------------------
+
+.theme-header {
+	padding: 20px 0;
+
+	@media @mobile {
+		padding-bottom: 10px;
+	}
+}
+
+.top-section {
+	padding: 0 60px 50px;
+
+	@media @desktop {
+		padding: 0 40px 30px;
+	}
+
+	@media @mobile {
+		padding: 0 30px;
+	}
+}
+
+
+// Element Positioning
+// -------------------
+
+// Logo Container
+.logo-container {
+	float: left;
+}
+
+// Account Buttons
+.account-buttons {
+	float: right;
+
+	@media @mobile {
+		position: fixed;
+		top: 3px;
+		right: 19px;
+		z-index: 9999;
+
+		.button,
+		.button:hover {
+			background-color: transparent;
+		}
+		.button--green {
+			color: @green;
+		}
+		.button--orange {
+			color: @orange;
+		}
+	}
+}
+
+
+// Logo
+// ----------
+
+.logo-image,
+.logo-headline {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+
+
+
+// -----------------------------
+// . #Page Intro
+// -----------------------------
+
+.page-intro {
+	padding: 30px 0 0;
+
+	@media @mobile {
+		padding: 20px 0;
+	}
+
+	p {
+		max-width: 80%;
+		@media @mobile {
+			max-width: 100%;
+		}
+	}
+}
+
+
+
+
+
+// -----------------------------
+// . #Feature Blocks
+// -----------------------------
+
+.feature-blocks {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	max-width: 1400px;
+
+	p {
+		color: @white;
+	}
+}
+
+
+// Feature Items
+// -------------
+
+.feature-item {
+	flex:         1 0 33.33%;
+	-ms-flex:     1 0 33.33%;
+	-webkit-flex: 1 0 33.33%;
+
+	min-height: 370px;
+	padding: 60px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	border-right:  1px solid rgba(255, 255, 255, 0.5);
+
+	// Removes border from 4th, 5th and 6th items
+	&:nth-child(n+4) {
+		border-bottom: 0;
+	}
+
+	@media @desktop-lrg {
+		min-height: inherit;
+		padding: 50px 50px 60px;
+	}
+
+	@media @desktop {
+		padding: 40px 40px 50px;
+		flex:         1 0 50%;
+		-ms-flex:     1 0 50%;
+		-webkit-flex: 1 0 50%;
+
+		&:nth-child(n+4) {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	@media @mobile {
+		flex:         1 0 100%;
+		-ms-flex:     1 0 100%;
+		-webkit-flex: 1 0 100%;
+
+		padding: 30px 30px 40px;
+		border-right: 0;
+	}
+}
+
+
+// Background Colors
+// -----------------
+
+// Blue
+.feature-item--blue {
+	background-color: @blue;
+
+	@media @desktop {
+		order: 2;
+	}
+
+	&:hover {
+		background-color: darken(@blue, 3%);
+	}
+}
+
+// Green
+.feature-item--green {
+	background-color: @green;
+	&:hover {
+		background-color: darken(@green, 3%);
+	}
+	@media @desktop {
+		order: 1;
+	}
+}
+
+// Orange
+.feature-item--orange {
+	background-color: @orange;
+	border-right: 0;
+
+	@media @desktop {
+		order: 3;
+		border-right: 1px solid rgba(255, 255, 255, 0.5);
+		border-bottom: 0;
+		&:nth-child(n+4) {
+			border-bottom: 0;
+		}
+	}
+
+	&:hover {
+		background-color: darken(@orange, 3%);
+	}
+}
+
+
+// Divider
+// -----------
+
+.divider {
+	width: 35px;
+	height: 3px;
+	margin: 0 0 20px 0;
+	border: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+// -----------------------------
+// . #Developer Overlay
+// -----------------------------
+
+.dev-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	display: block;
+  	.transition(0.3s);
+	pointer-events: none;
+}
+
+// Overlay Container
+.dev-overlay-container {
+	opacity: 0;
+	width: 400px;
+    margin: 0 auto;
+    
+    @media @mobile {
+    	width: 90%;
+    }
+ }
+
+// Overlay Target
+.dev-overlay:target {
+	display: block;
+	pointer-events: auto;
+  	background: #f3f3f3;
+	.transition(.3s);
+
+	.dev-overlay-container {
+		opacity: 1;
+		top: 0;
+		.transition-delay(0.8s);
+	}
+}
+
+// Close
+.icon--close {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+
+	font-size: 44px;
+	color: @grey-dark;
+	text-decoration: none;
+
+	@media @mobile {
+		right: 5%;
+		top: 44px;
+		font-size: 32px;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+}
+
+
+
+
+// -----------------------------
+// . #Developer Signup Form
+// -----------------------------
+
+.dev-signup-form {
+	margin-top: 100px;
+
+	font-family: 'arkiv-bold', helvetica, arial;
+
+	@media @mobile {
+		margin-top: 40px;
+	}
+
+	// Hide unused buynow details
+	span,
+	.widget-buynow-title, 
+	.password-mask-toggle, 
+	.widget-buynow-newsletter-text, 
+	.widget-buynow-container-list li:nth-child(2n),
+	.widget-buynow-container-list li:nth-child(3n),
+	.widget-buynow-paymentMethods {
+		display: none;
+	}
+	li {
+		list-style: none;
+	}
+	label {
+		position: absolute;
+		padding-left: 16px;
+		line-height: 45px;
+		font-size: 17px;
+		color: darken(@green, 10%);
+	}
+	input {
+		width: 100%;
+		height: 44px;
+		border: 0;
+		.rounded(4px);
+		margin-bottom: 14px;
+		background-color: @white;
+		text-indent: 100px;
+		
+		font-family: 'proxima-nova', helvetica, arial;
+		line-height: 46px;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+	button {
+		width: 100%;
+		height: 44px;
+		padding: 0 16px;
+		border: 0;
+		.rounded(4px);
+		background-color: @green;
+
+		font-size: 17px;
+		color: @white;
+		text-align: left;
+		-webkit-font-smoothing: antialiased;
+		cursor: pointer;
+
+	}
+}
+
+// Developer Signup Title
+.dev-signup-title {
+	margin-bottom: 30px;
+	text-align: center;
+
+	@media @mobile {
+		text-align: left;
+	}
+
+	* {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.logo-icon {
+		margin-right: 4px;
+	}
+	h2 { 
+		padding-top: 1px;
+		margin-bottom: 0;
+		color: @grey-dark;
+	}
+}
+
+// Developer Signup Text
+.dev-signup-text {
+	padding: 20px 0;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+// --------------------
+// CORE: Resets
+// --------------------
+
+@import "@{templateLocal}/less/reset/normalize.less"; // Normalize CSS 
+
+
+// General Resets
+// --------------
+
+body {
+	font: 16px / 24px sans-serif;
+	font-weight: 400;
+	color: #333;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+  	overflow-y: scroll;
+}
+
+*, *:before, *:after {
+   -moz-box-sizing:    border-box;   /* Firefox 1, probably can drop this */
+   -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
+    box-sizing:        border-box;   /* Everything else */
+}
+
+ul, ol, li {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	a {
+		border: 0;
+	}
+}
+
+// Clearfix
+// ---------
+
+.clearfix {
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+// BaseKit Resets
+// --------------
+
+.bk-zone {
+	min-height: 40px;
+}
+

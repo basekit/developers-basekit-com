@@ -1,0 +1,294 @@
+// -------------------------------------------
+// BK Developer Portal: LESS > Sidebar Pullout
+// -------------------------------------------
+
+* { .transition(0.3s); }
+
+
+// -----------------------------
+// #Sidebar
+// -----------------------------
+
+.sidebar {
+    background: @grey-dark;
+    width: 200px;
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    z-index: 4;
+    padding: 96px 0 0 30px;
+
+    @media @mobile {
+        left: -210px;
+        width: inherit;
+        padding: 60px 30px;
+    }
+
+    .open & {
+        left: 0;
+    }
+}
+
+.sidebar li {
+    position: relative;
+    opacity: 1;
+    left: 0;
+}
+
+
+
+
+// -----------------------------
+// #Sidebar Menu
+// -----------------------------
+
+.sidebar-menu {
+    margin-bottom: 30px;
+    a {
+        font-family: 'arkiv-bold', helvetica, arial;
+        .heading-4;
+        color: @white;
+        text-decoration: none;
+    }
+}
+
+// Colour Variations
+// -----------------
+
+.notch:after {
+    display: block;
+    width: 34px;
+    height: 2px;
+    content: '';
+    margin-bottom: 10px;
+}
+
+
+// Sidebar Menu: Blue
+.sidebar-menu--blue {
+    h4 {
+        color: @blue;
+        &.notch:after {
+            background-color: @blue;
+        }
+    }
+    a:hover {
+        color: lighten(@blue, 15%);
+    }
+}
+
+// Sidebar Menu: Orange
+.sidebar-menu--green {
+    h4 {
+        color: @green;
+        &.notch:after {
+            background-color: @green;
+        }
+    }
+    a:hover {
+        color: lighten(@green, 15%);
+    }
+}
+
+// Sidebar Menu: Orange
+.sidebar-menu--orange {
+    h4 {
+        color: @orange;
+        &.notch:after {
+            background-color: @orange;
+        }
+    }
+    a:hover {
+        color: lighten(@orange, 15%);
+    }
+}
+
+
+
+
+// -----------------------------
+// #Menu Overlay
+// -----------------------------
+
+.menu-overlay {
+    position: fixed;
+    width:100%;
+    top: 0;
+    bottom:0;
+    left:0;
+    z-index: -1;
+    background:rgba(255,255,255,.0);
+}
+
+.open .menu-overlay {
+    z-index: 3;
+    background: rgba(255,255,255, 0.5);
+}
+
+
+
+
+// -----------------------------
+// #Menu Toggle
+// -----------------------------
+
+.menu-toggle {
+    position: fixed;
+    width: 70px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: @grey-dark;
+    box-shadow: 10px 0px 0 rgba(0,0,0,0.1);
+
+    @media @desktop {
+        width: 60px;
+    }
+
+    @media @mobile {
+        width: 100%;
+        height: 38px;
+        box-shadow: none;
+    }
+}
+
+.open .menu-toggle {
+    left: 200px;
+
+     @media @mobile {
+        left: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// #Menu Icon
+// -----------------------------
+
+.menu-icon {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    margin: 0 auto;
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    cursor: pointer;
+
+    @media @mobile {
+        top: 10px;
+        left: 30px;
+        margin: 0;
+    }
+}
+
+
+// Menu Icon: Elements
+// -------------------
+
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background-color: @white;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg);
+    .transition(0.3s);
+}
+
+
+// Menu Icon: Positioning
+// ----------------------
+
+.menu-icon span:nth-child(even) {
+    left: 50%;
+}
+.menu-icon span:nth-child(odd) {
+    left:0px;
+}
+.menu-icon span:nth-child(1), 
+.menu-icon span:nth-child(2) {
+    top: 0;
+}
+.menu-icon span:nth-child(3), 
+.menu-icon span:nth-child(4) {
+    top: 8px;
+}
+.menu-icon span:nth-child(5), 
+.menu-icon span:nth-child(6) {
+    top: 16px;
+}
+
+
+// Menu Icon: Animations
+// ---------------------
+
+.open {
+    .menu-icon span:nth-child(1),
+    .menu-icon span:nth-child(6) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .menu-icon span:nth-child(2),
+    .menu-icon span:nth-child(5) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .menu-icon span:nth-child(1) {
+        left: 5px;
+        top: 3px;
+    }
+    .menu-icon span:nth-child(2) {
+        left: calc(50% - 5px);
+        top: 3px;
+    }
+    .menu-icon span:nth-child(3) {
+        left: -50%;
+        opacity: 0;
+    }
+    .menu-icon span:nth-child(4) {
+        left: 100%;
+        opacity: 0;
+    }
+    .menu-icon span:nth-child(5) {
+        left: 5px;
+        top: 12px;
+    }
+    .menu-icon span:nth-child(6) {
+        left: calc(50% - 5px);
+        top: 12px;
+    }
+}
+
+
+// Copyright
+// ----------
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+    color: #747474;
+}
+
+
+
+

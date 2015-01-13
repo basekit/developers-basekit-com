@@ -1,0 +1,35 @@
+// ----------------------------------
+// BK Developer Portal: LESS > Mixins
+// ----------------------------------
+
+// Media Queries
+// -------------
+
+@desktop-lrg: ~"only screen and (max-width: 1200px)";
+@desktop:     ~"only screen and (max-width: 960px)";
+@mobile:      ~"only screen and (max-width: 620px)";
+
+
+// LESS Mixins
+// -----------
+
+// Rounded Corners
+.rounded(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+}
+
+// Transitions
+.transition(@duration, @ease:ease-out) {
+	-webkit-transition: all @duration @ease;
+	-moz-transition:    all @duration @ease;
+	-o-transition:      all @duration @ease;
+	transition:         all @duration @ease;
+}
+.transition-delay (@time: .4s) {
+	-webkit-transition-delay: @time;  
+	-moz-transition-delay:    @time;  
+	-o-transition-delay:      @time;  
+	-transition-delay:        @time; 
+}
