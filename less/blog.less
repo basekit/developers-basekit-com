@@ -1,0 +1,114 @@
+// -------------------------------
+// BK Developer Theme: CSS > Blog
+// -------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// #Blog Post List
+// #Header
+
+
+
+
+// -----------------------------
+// #Blog Post List
+// -----------------------------
+
+// Blog Post Container
+.blog-post-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	margin-bottom: 30px;
+}
+
+// Individual Blog List Post
+.blog-post-item {
+	border-right: 1px solid rgba(0,0,0, 0.1);
+	border-bottom: 1px solid rgba(0,0,0, 0.1);
+	padding: 60px 35px 55px 35px;
+	position: relative;
+	width: 33.33%;
+	// Remove border from 4th blog post on
+	&:nth-child(n+4) {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	}
+	// Remove border from last blog post
+	&:nth-child(3n) {
+		border-right: none;
+	}
+	// Inline Image
+	.blog-post-feature-image {
+		display: none;
+	}
+	// Blog Title
+	.blog-post-title {
+		&:after {
+			background-color: @green;
+			content: "";
+			display: block;
+			height: 3px;
+			margin: 25px 0;
+			width: 40px;
+		}
+		a {
+			color: @grey-dark;
+			text-decoration: none;
+		}
+	}
+	// Read More Link
+	.blog-post-more-link a {
+		color: @green;
+		font-weight: 600;
+		margin-bottom; 30px;
+		text-decoration: none;
+	}
+	// Date Stamp
+	.blog-post-date {
+		bottom: 0;
+		color: lighten(@grey-light, 15%);
+		font-size: 13px;
+		font-weight: 600;
+		margin: 25px;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+// Blog List Pagination
+.blog-list-footer {
+	position: absolute;
+	left: 30px;
+	margin-bottom: 25px;
+	// Previous & Next Buttons
+	a {
+		border-radius: 100px;
+		border: 2px solid @green;
+		color: @green;
+		padding: 10px 20px;
+		text-decoration: none;
+		&:hover {
+			color: darken(@green, 10%);
+		}
+		&.paginate-older:before {
+			content: "<";
+			padding-right: 5px;
+		}	
+		&.paginate-newer:after {
+			content: "<";
+			padding-left: 5px;
+		}
+	}
+}
