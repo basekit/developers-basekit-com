@@ -444,7 +444,7 @@
 
 		&:focus { outline: 0; }
 
-		&.email { text-indent: 80px; }
+		&.email { text-indent: 110px; }
 		&.password, 
 		&.widget-buynow-email { text-indent: 110px; }
 	}
@@ -531,6 +531,9 @@
 	}
 	button {
 		background-color: @green;
+		&:hover {
+			background-color: darken(@green, 10%);
+		}
 	}
 }
 
@@ -540,6 +543,9 @@
 	}
 	button {
 		background-color: @orange;
+		&:hover {
+			background-color: darken(@orange, 10%);
+		}
 	}
 }
 
