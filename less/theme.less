@@ -396,9 +396,9 @@
 // . #Developer Signup Form
 // -----------------------------
 
-.dev-signup-form, .dev-login-form {
+.dev-signup-form, 
+.dev-login-form {
 	margin-top: 100px;
-
 	font-family: 'arkiv-bold', helvetica, arial;
 
 	@media @mobile {
@@ -445,7 +445,8 @@
 		&:focus { outline: 0; }
 
 		&.email { text-indent: 80px; }
-		&.password, &.widget-buynow-email { text-indent: 110px; }
+		&.password, 
+		&.widget-buynow-email { text-indent: 110px; }
 	}
 	button {
 		width: 100%;
@@ -459,7 +460,20 @@
 		text-align: left;
 		-webkit-font-smoothing: antialiased;
 		cursor: pointer;
-
+	}
+	.password-mask-toggle {
+		background-color: rgba(0,0,0, 0.2);
+		display: block;
+		top: 68px;
+		right: 10px;
+		width: 55px;
+		background-color: gainsboro;
+		font-size: 14px;
+		position: absolute;
+		text-align: center;
+		height: 25px;
+		padding: 0;
+		z-index: 9999;
 	}
 	// Error Message
 	.error {
@@ -487,12 +501,21 @@
 			margin: 8px 0 0;
 		}
 	}
+	// Success Container
+	.js-overlay {
+	
+	}
 	// Success Message
 	.js-message {
-		color: green;
+		background: #f3f3f3 image('/images/loading.gif') no-repeat center 28%;
+		padding: 25% 0;
+		position: absolute;
+		width: 100%;
+
+		color: #25a33d;
 		display: none;
-		margin-top: 8px;
 		text-align: center;
+		top: 0;
 		&:before {
 			content: "\2713";
 			margin-right: 5px;
@@ -503,6 +526,9 @@
 .dev-signup-form {
 	label {
 		color: darken(@green, 10%);
+	}
+	input.password {
+		padding-right: 75px;
 	}
 	button {
 		background-color: @green;
