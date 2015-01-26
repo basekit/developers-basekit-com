@@ -15,6 +15,48 @@
 // #Developer Overlay
 // #Developer Signup Form
 
+.in-tdk #page-zones__main-widgets__ContentWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ContactFormWidget {display: none;}
+.in-tdk #page-zones__main-widgets__TwitterWidget {display: none;}
+.in-tdk #page-zones__main-widgets__buttonWidget {display: none;}
+.in-tdk #page-zones__main-widgets__socialiconsWidget {display: none;}
+.in-tdk #page-zones__main-widgets__youtubeWidget {display: none;}
+.in-tdk #page-zones__main-widgets__LineWidget {display: none;}
+.in-tdk #page-zones__main-widgets__MapWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget1 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget2 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget3 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget4 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget5 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget6 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget7 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget8 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget9 {display: none;}
+.in-tdk #page-zones__main-widgets__ProfileWidget10 {display: none;}
+.in-tdk #page-zones__main-widgets__ImageWidget {display: none;}
+.in-tdk #page-zones__main-widgets__paypalbuynowWidget {display: none;}
+.in-tdk #page-zones__main-widgets__tweetWidget {display: none;}
+.in-tdk #page-zones__main-widgets__dropboxWidget {display: none;}
+.in-tdk #page-zones__main-widgets__clicktocallWidget {display: none;}
+.in-tdk #page-zones__main-widgets__galleryWidget {display: none;}
+.in-tdk #page-zones__main-widgets__responsiveslideshowWidget {display: none;}
+.in-tdk #page-zones__main-widgets__signupformWidget {display: none;}
+.in-tdk #page-zones__main-widgets__blogpostlistWidget {display: none;}
+//.in-tdk #page-zones__main-widgets__blogpostWidget {display: none;}
+.in-tdk #page-zones__main-widgets__blogsearchWidget {display: none;}
+.in-tdk #page-zones__main-widgets__menusectionsWidget {display: none;}
+.in-tdk #page-zones__main-widgets__menuWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ecomproductslistWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ecomproductWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ecombasketWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ecombasketsummaryWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ecomcategorieslistWidget {display: none;}
+.in-tdk #page-zones__main-widgets__ecomfeaturedproductsWidget {display: none;}
+.in-tdk #page-zones__main-widgets__soundcloudWidget {display: none;}
+.in-tdk #page-zones__main-widgets__facebookCommentsWidget {display: none;}
+.in-tdk #page-zones__main-widgets__donationWidget {display: none;}
+.in-tdk #page-zones__main-widgets__YelpreviewWidget {display: none;}
+
 
 
 
@@ -69,22 +111,13 @@
 
 .theme-header {
 	padding: 20px 60px;
-
-	@media @mobile {
-		padding-bottom: 10px;
+	@media @desktop {
+		padding: 20px 35px;
 	}
 }
 
 .top-section {
 	padding: 0;
-
-	@media @desktop {
-		padding: 0 40px 40px;
-	}
-
-	@media @mobile {
-		padding: 0 30px 10px;
-	}
 }
 
 
@@ -138,9 +171,11 @@
 
 .page-intro {
 	padding: 30px 60px;
-
+	@media @desktop {
+		padding: 30px 35px;
+	}
 	@media @mobile {
-		padding: 20px 0;
+		padding: 20px 35px;
 	}
 
 	p {
@@ -250,6 +285,9 @@ section[role="main"] {
 // Green
 .bg-color--green {
 	background-color: @green;
+	h1, p {
+		color: white;
+	}
 	&:hover {
 		background-color: darken(@green, 3%);
 	}

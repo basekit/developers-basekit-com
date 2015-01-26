@@ -2,7 +2,7 @@
 // BK Developer Portal: LESS > Typography
 // --------------------------------------
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	margin: 0;
 	padding: 0;
 	font-family: 'arkiv-bold', helvetica, arial;
@@ -12,7 +12,7 @@ h1, h2, h3, h4 {
 h1 {
 	font-size: 32px;
 	line-height: 32px;
-	color: @grey;
+	color: @grey-dark;
 
 	margin-bottom: 12px;
 
@@ -35,14 +35,19 @@ h2 {
 }
 
 h3 {
-	font-size: 12px;
-	line-height: 20px;
-	color: lighten(@grey-light, 20%);
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	color: @grey-dark;
+	font-size: 19px;
+	line-height: 28px;
 
-	@media @mobile {
-		font-size: 10px;
+	&.logo-headline {
+		color: lighten(@grey-light, 20%);
+		font-size: 12px;
+		letter-spacing: 1px;
+		line-height: 20px;
+		text-transform: uppercase;
+		@media @mobile {
+			font-size: 10px;
+		}
 	}
 }
 
@@ -52,21 +57,58 @@ h4, .heading-4 {
 	color: @grey;
 }
 
+h5 {
+
+}
+
 p, .paragraph {
 	font-family: 'proxima-nova', helvetica, arial;
 	font-size: 16px;
 	font-weight: normal;
-	line-height: 28px;
+	line-height: 26px;
 	color: @grey-light;
 
 	margin: 0 0 20px 0;
-
-	@media @desktop {
-		font-size: 15px;
-		line-height: 24px;
-	}
 }
 
 a {
 	color: @blue;
 }
+
+
+// Font Awesome Icon Font
+// -----------------------
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: image('/fonts/icons/fontawesome-webfont.eot?v=4.2.0');
+    src: image('/fonts/icons/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+         image('/fonts/icons/fontawesome-webfont.woff?v=4.2.0') format('woff'), 
+         image('/fonts/icons/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), 
+         image('/fonts/icons/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Fontawesome
+.btn:before,
+.btn:after {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+.btn { 
+    font-size: 24px;
+    font-style: normal; 
+}
+
+.icon:before { margin-right: 5px; }
+.icon:after  { margin-left:  5px; }
+
+
+// Social Icons
+// ------------
+
+.btn.facebook:before  { content: "\f09a"; } // Facebook
+.btn.twitter:before   { content: "\f099"; } // Twitter
+.btn.googleplus:before { content: "\f0d5"; } // Google Plus
+

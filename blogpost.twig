@@ -1,0 +1,45 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Sidebar Pullout Menu -->
+{% include "includes/sidebar-pullout.twig" %}
+
+<!-- Page Content -->
+<section role="main" id="page-content" class="page-content">
+
+	<section class="top-section">
+
+		<div class="container">
+
+			<!-- Theme Header -->
+			{% include "includes/header.twig" %}
+
+			<!-- Page Intro -->
+			<div class="page-intro bg-color--green">
+
+				<div class="container">
+
+					{{widget('content', 'blog-intro_title', {"content":'<h1>Basekit Developer Blog</h1><p>Stay up to date with the latest theme, community and technical news.</p>'})|raw}}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<!-- End Top Section -->
+
+	<!-- Feature Blocks -->
+	<section role="main" class="developer-blog">
+
+		{{zone('main')|raw}}
+
+	</section>
+	<!-- End Developer Blog -->
+
+</section>
+<!-- End Page Content -->
+
+{% endblock %}
