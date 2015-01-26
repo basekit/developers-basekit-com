@@ -6,21 +6,21 @@
 {% include "includes/sidebar-pullout.twig" %}
 
 <!-- Page Content -->
-<section id="page-content" class="page-content">
+<section role="main" id="page-content" class="page-content">
 
 	<section class="top-section">
-		
+
 		<div class="container">
 
 			<!-- Theme Header -->
 			{% include "includes/header.twig" %}
 
 			<!-- Page Intro -->
-			<div class="page-intro">
+			<div class="page-intro bg-color--green">
 
 				<div class="container">
 
-					{{zone('main')|raw}}
+					{{widget('content', 'intro_title', {"content":'<h1>Title</h1><p>Subtitle</p>'})|raw}}
 
 				</div>
 
@@ -30,6 +30,14 @@
 
 	</section>
 	<!-- End Top Section -->
+
+	<!-- Feature Blocks -->
+	<section role="main" class="developer-blog">
+
+		{{zone('main')|raw}}
+
+	</section>
+	<!-- End Developer Blog -->
 
 </section>
 <!-- End Page Content -->
