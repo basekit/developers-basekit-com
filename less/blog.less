@@ -364,16 +364,17 @@
 .blog-post-title-content-wrap {
 	h1,h2,h3,h4 {
 		color: darken(@color-swatch4, 8%);
+		margin-bottom: 0;
 	}
 	h1 {
 		font-size: 30px;
 		line-height: 36px;
-		padding-bottom: 20px;
+		margin: 20px 0 25px;
 	}
 	h2 {
 		font-size: 22px;
 		line-height: 28px;
-		padding: 15px 0;
+		margin: 15px 0;
 	}
 	h3 {
 		font-size: 18px;
@@ -382,14 +383,16 @@
 	p {
 		font-size: 16px;
 		line-height: 30px;
-		padding-bottom: 15px;
-		margin: 0;
+		margin-bottom: 15px;
 		@media @mobile {
 			line-height: 28px;
 		}
 		+ hr {
 			margin: 30px 0 40px;
 		}
+	}
+	hr {
+		border-color: rgba(0,0,0,0.075);
 	}
 	a {
 		text-decoration: underline;
@@ -406,10 +409,11 @@
 		text-decoration: underline;
 	}
 	p img {
-		margin: 15px 0;
+		margin: 15px 0 0;
 	}
 	blockquote {
 		background-color: rgba(0,0,0, 0.02);
+		border: 1px solid rgba(0,0,0, 0.04);
 		color: rgb(100,100,100);
 		padding: 25px 25px 25px 60px;
 		position: relative;
@@ -425,7 +429,7 @@
 			font-size: 72px;
 			left: 16px;
 			position: absolute;
-			top: 45px;
+			top: 44px;
 			@media @mobile {
 				left: 12px;
 			}
