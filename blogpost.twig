@@ -20,15 +20,35 @@
 	</section>
 	<!-- End Top Section -->
 
+	<!--<ul class="blog-breadcrumb">
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/home">Blog</a></li>
+    </ul>-->
+
 	<!-- Feature Blocks -->
 	<section role="main" class="developer-blog">
 
-		{{zone('main')|raw}}
+		{{widget('blogpost', 'blogpost1', {})|raw}}
 
 	</section>
 	<!-- End Developer Blog -->
 
 </section>
 <!-- End Page Content -->
+
+{% endblock %}
+
+{% block templatebody %}
+
+<!--Stick On Scroll for Blogpost Metadata-->
+<script src="{{asset('js/stickUp.min.js')}}"></script>
+
+<script type="text/javascript">
+  jQuery(function($) {
+    $(document).ready( function() {
+      $('.blog-post-metadata').stickUp();
+    });
+  });
+</script>
 
 {% endblock %}

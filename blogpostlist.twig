@@ -15,6 +15,17 @@
 			<!-- Theme Header -->
 			{% include "includes/header.twig" %}
 
+			<!-- Page Intro -->
+			<div class="page-intro bg-color--green">
+
+				<div class="container">
+
+					{{widget('content', 'blog-intro_title', {"content":'<h1>Basekit Developer Blog</h1><p>Stay up to date with the latest theme, community and technical news.</p>'})|raw}}
+
+				</div>
+
+			</div>
+
 		</div>
 
 	</section>
@@ -23,8 +34,8 @@
 	<!-- Feature Blocks -->
 	<section role="main" class="developer-blog">
 
-		{{zone('main')|raw}}
-
+		{{widget('blogpostlist', 'blogpostlist1', {})|raw}}
+		
 	</section>
 	<!-- End Developer Blog -->
 
