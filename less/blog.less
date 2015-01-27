@@ -47,16 +47,6 @@
 			border-right: 0!important;
 			width: 100%;
 		}
-		/*&:hover {
-			background-repeat: no-repeat;
-			display: block;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			width: 98%;
-			left: 10px;
-			opacity: 1;
-		}*/
 		// Remove border from 4th blog post onwards
 		&:nth-child(n+4) {
 			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -266,7 +256,8 @@
 			}
 		}
 		// Category & Tags Label
-		.blog-post-category-label, .blog-post-tags-label {
+		.blog-post-category-label, 
+		.blog-post-tags-label {
 			color: #545454;
 			font-family: 'arkiv-bold', helvetica, arial;
 			font-size: 13px;
@@ -307,7 +298,8 @@
 				}
 			}
 		}
-		.blog-post-category, .blog-post-tag {
+		.blog-post-category, 
+		.blog-post-tag {
 			display: inline-block;
 			margin-bottom: 12px;
 			a {
@@ -475,91 +467,6 @@
 		white-space: pre-wrap;
 	}
 }
-
-/*
-h1,h2,h3,h4 {
-	color: darken(@color-swatch4, 8%);
-	margin-bottom: 0;
-}
-h1 {
-	font-size: 30px;
-	line-height: 36px;
-	padding: 20px 0 25px;
-	&.blog-post-title {
-		padding-top: 0;
-	}
-}
-h2 {
-	font-size: 22px;
-	line-height: 28px;
-	padding: 15px 0 25px;
-}
-h3 {
-	font-size: 18px;
-}
-p {
-	font-size: 16px;
-	line-height: 30px;
-	margin-bottom: 15px;
-	@media @mobile {
-		line-height: 28px;
-	}
-}
-hr {
-	border-color: rgba(0,0,0,0.075);
-	margin: 30px 0 55px;
-}
-a {
-	text-decoration: underline;
-}
-ol, ul {
-	padding-left: 20px;
-	margin: 5px 0 20px;
-	li {
-		color: @grey-light;
-		list-style: inherit;
-		margin-bottom: 10px;
-	}
-}
-p {
-	margin: 0;
-	padding-bottom: 15px;
-}
-p a, ul a, ol a, span a {
-	text-decoration: underline;
-}
-p img {
-	margin: 0;
-}
-blockquote {
-	background-color: rgba(0,0,0, 0.02);
-	border: 1px solid rgba(0,0,0, 0.04);
-	color: rgb(100,100,100);
-	padding: 25px 25px 25px 60px;
-	position: relative;
-	line-height: 28px;
-	margin: 15px 0;
-	@media @mobile {
-		font-size: 15px;
-		padding-left: 50px;
-	}
-	&:before {
-		color: rgba(0,0,0, 0.085);
-		content:"\201C";
-		font-size: 72px;
-		left: 16px;
-		position: absolute;
-		top: 44px;
-		@media @mobile {
-			left: 12px;
-		}
-	}
-}
-pre {
-	color: rgb(100,100,100);
-	white-space: pre-wrap;
-}
-}*/
 
 
 // Disqus Comments
