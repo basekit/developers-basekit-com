@@ -235,7 +235,7 @@
 		width: 28%;
 		vertical-align: top;
 		&.stuckMenu {
-			@media @mobile {
+			@media @tablet {
 				position: relative!important;
 			}
 		}
@@ -245,6 +245,9 @@
 		@media @tablet {
 			padding: 10px 25px 40px;
 			width: 100%;
+		}
+		@media @mobile {
+			padding: 5px 25px 15px;
 		}
 		// Date & Time
 		.blog-post-publish-date {
@@ -341,6 +344,9 @@
 		@media @tablet {
 			padding: 25px 35px 30px;
 		}
+		@media @mobile {
+			padding: 20px 25px 5px;
+		}
 		// Social Buttons
 		.btn {
 			border: none;
@@ -388,6 +394,9 @@
 		font-size: 30px;
 		line-height: 38px;
 		padding-bottom: 20px;
+		@media @mobile {
+			font-size: 26px;
+		}
 	}
 	h2 {
 		font-size: 26px;
@@ -557,8 +566,13 @@ pre {
 // ----------------------
 
 .widget.disqus {
-	padding: 30px 50px 30px 60px;
+	padding: 30px 0 30px 60px;
+	max-width: 70%;
+	@media @tablet {
+		padding: 20px 35px;
+		max-width: 100%;
+	}
 	@media @mobile {
-		margin: 20px 25px 20px 40px;
+		padding: 20px 25px;
 	}
 }
