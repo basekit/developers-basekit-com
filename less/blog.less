@@ -102,6 +102,9 @@
 				height: 3px;
 				margin: 25px 0;
 				width: 40px;
+				@media @tablet {
+					margin: 25px 0 5px;
+				}
 			}
 			a {
 				color: @grey-dark;
@@ -138,6 +141,9 @@
 		position: absolute;
 		margin: 10px 0 25px;
 		width: 100%;
+		@media @mobile {
+			margin-top: 0;
+		}
 		// Previous & Next Buttons
 		a {
 			border-radius: 100px;
@@ -157,6 +163,9 @@
 			}
 			&.paginate-older {
 				left: 10px;
+				@media @mobile {
+					left: 5px;
+				}
 				&:before {
 					content: "\003c";
 					padding-right: 5px;
@@ -375,7 +384,6 @@
 .blog-post-title-content-wrap {
 	h1,h2,h3,h4 {
 		color: darken(@color-swatch4, 8%);
-		font-family: din;
 	}
 	h1 {
 		font-size: 30px;
@@ -407,6 +415,9 @@
 		+ hr {
 			margin: 1.5em 0 3em;
 		}
+	}
+	hr {
+		border-color: rgba(0,0,0,0.05);
 	}
 	a {
 		text-decoration: underline;
