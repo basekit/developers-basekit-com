@@ -226,7 +226,7 @@
 	.blog-post-metadata {
 		display: inline-flex;
 		flex-direction: column;
-		padding: 15px 20px 0 50px;
+		padding: 15px 20px 0 40px;
 		position: relative;
 		width: 28%;
 		vertical-align: top;
@@ -399,7 +399,7 @@
 	h2 {
 		font-size: 26px;
 		line-height: 34px;
-		padding-bottom: 12px;
+		padding: 10px 0 15px;
 	}
 	h3 {
 		font-size: 22px;
@@ -480,9 +480,11 @@
 // ----------------------
 
 .widget.disqus {
-	padding: 30px 0 30px 60px;
+	border: 1px solid 1px solid rgba(0,0,0,0.075);
+	padding: 50px 60px 30px;
 	max-width: 70%;
 	@media @tablet {
+		border: none;
 		padding: 20px 35px;
 		max-width: 100%;
 	}
