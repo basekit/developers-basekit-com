@@ -29,9 +29,10 @@
     </ul>-->
 
 	<!-- Feature Blocks -->
-	<section role="main" class="developer-blog">
+	<section role="main" class="developer-blog" id="metadata">
 
-		{{zone('main')|raw}}
+		{{widget('blogpost', 'blogpost1', {})|raw}}
+		{{widget('disqus', 'disqus1', {})|raw}}
 
 	</section>
 	<!-- End Developer Blog -->
@@ -42,16 +43,4 @@
 {% endblock %}
 
 {% block templatebody %}
-
-<!--Stick On Scroll for Blogpost Metadata
-<script src="{{asset('js/stickUp.min.js')}}"></script>
-
-<script type="text/javascript">
-  jQuery(function($) {
-    $(document).ready( function() {
-      $('.blog-post-metadata').stickUp();
-    });
-  });
-</script>-->
-
 {% endblock %}
