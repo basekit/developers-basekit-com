@@ -1,7 +1,7 @@
 {
     "name": "basekit-dev-portal",
     "thumbnail": "thumbnail.png",
-    "pageTypes":["home", "blogpostlist", "blogpost", "FAQ"],
+    "pageTypes":["home", "blogpostlist", "blogpost", "faqs"],
     "colorSwatches":
     {
         "Swatch 1": {
