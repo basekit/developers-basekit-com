@@ -25,6 +25,36 @@
 
 .blogpostlist {
 
+	// No posts to display
+	> p {
+		padding: 45px 30px 40px 65px;
+	}
+
+	// Back to blog posts from related tags
+	.blog-back-home {
+		background-color: darken(@green, 12%);
+		.rounded(45px);
+		color: white;
+		font-weight: 600;
+		padding: 10px 15px 8px;
+		position: absolute;
+		right: 35px;
+		text-decoration: none;
+		top: -90px;
+		@media @tablet {
+			display: none;
+		}
+		&:after {
+			content: ">";
+			font-size: 15px;
+			padding-left: 8px;
+			position: relative;
+		}
+		&:hover {
+			background-color: darken(@green, 16%);
+		}
+	}
+
 	// Blog Post Container
 	.blog-post-list {
 		display: -webkit-box;

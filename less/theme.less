@@ -126,7 +126,10 @@
 		padding: 20px 25px;
 	}
 	h1 {
-		padding-bottom: 10px;
+		padding-bottom: 0;
+	}
+	h1 + p {
+		padding-top: 10px;
 	}
 	p {
 		margin: 0;
@@ -146,7 +149,12 @@
 // #Main Section
 // -----------------------------
 
-section[role="main"] {
+.main {
+	padding: 30px 35px 30px 65px;
+	position: relative;
+	@media @mobile {
+		padding: 20px 25px;
+	}
 }
 
 
@@ -167,7 +175,7 @@ section[role="main"] {
 
 	max-width: 1300px;
 
-	p {
+	h2, p {
 		color: @white;
 		max-width: 85%;
 	}
@@ -579,4 +587,126 @@ section[role="main"] {
 .dev-signup-text, .dev-login-text {
 	padding: 20px 0;
 	text-align: center;
+}
+
+
+
+
+// -----------------------------
+// . #Developer Signup Form
+// ----------------------------
+
+.faq-questions, 
+.faq-subnav {
+	display: inline-block;
+}
+
+.faq-questions {
+	border-right: 1px solid rgba(0,0,0,0.075);
+	padding: 0 10% 20px 0;
+	width: 73%;
+	@media @mobile {
+		border-right: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	// Section Titles
+	h5 {
+		//background-color: rgb(240,240,240);
+		background-color: @orange;
+		color: white;
+		display: inline-block;
+		padding: 5px 10px;
+		margin: 50px 0 20px;
+
+		@media @mobile {
+			margin: 25px 0 15px;
+		}
+
+		&:first-child {
+			margin-top: 5px;
+		}
+
+		&#get-started, 
+		&#support,
+		&#theme-building {
+			&:before {
+				position: relative;
+				margin-right: 5px;
+			}
+		}
+		&#get-started:before  {
+			content: "\f135";
+		}
+		&#support:before {
+			content: "\f1cd";
+		}
+		&#theme-building:before {
+			content: "\f120";
+		}
+	}
+
+	img {
+		margin: 15px 0 25px;
+	}
+
+	// Descriptive Title (Heading)
+	dt {
+		color: @grey-dark;
+		font-family: 'arkiv-bold', helvetica, arial;
+		font-size: 20px;
+		font-weight: normal;
+		line-height: 28px;
+		padding: 18px 0;
+	}
+
+	// Descriptive Description (Paragraph)
+	dd {
+		color: @grey-light;
+		font-family: 'proxima-nova', helvetica, arial;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 26px;
+		margin-left: 0;
+		padding-bottom: 18px;
+	}
+
+	ol {
+		padding-left: 20px;
+		li {
+			color: @grey-light;
+			margin-bottom: 15px;
+		}
+	}
+
+	// Sections Divider
+	hr {
+		border-color: rgba(0,0,0, 0.06);
+		margin: 40px 0 55px;
+	}
+}
+
+.faq-subnav {
+	padding: 15px 20px 0 40px;
+	position: absolute;
+	top: 40px;
+	vertical-align: top;
+	width: 25%;
+	@media @mobile {
+		display: none;
+	}
+
+	h5 {
+		padding-bottom: 20px;
+	}
+	ul {
+		list-style: none;
+	}
+	li {
+		margin-bottom: 10px;
+		a {
+			text-decoration: none;
+		}
+	}
 }
