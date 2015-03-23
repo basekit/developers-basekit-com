@@ -572,10 +572,12 @@ section.features {
 	}
 	p {
 		margin-bottom: 0;
+		a {
+			margin-left: 4px;
+		}
 	}
 	a {
 		color: lighten(@dark-grey, 25%);
-		margin-left: 4px;
 		text-decoration: none;
 		&:hover {
 			color: @white;
@@ -583,6 +585,11 @@ section.features {
 		&.button {
 			margin-bottom: 25px;
 			min-width: 250px;
+
+			@media @mobile {
+				display: block;
+				min-width: 0;
+			}
 		}
 	}
 }
