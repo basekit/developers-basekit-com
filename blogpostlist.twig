@@ -2,47 +2,25 @@
 
 {% block content %}
 
-<!-- Signup / Login Overlay -->
-{% include "includes/form-overlay.twig" %}
 
-<!-- Sidebar Pullout Menu -->
-{% include "includes/sidebar-pullout.twig" %}
+<!-- HEADER & NAVIGATION -->
 
-<!-- Page Content -->
-<section id="page-content" class="page-content">
+{% include 'includes/header.twig' %}
 
-	<section class="top-section">
 
-		<div class="container">
 
-			<!-- Theme Header -->
-			{% include "includes/header.twig" %}
+<!-- MAIN SECTION -->
 
-			<!-- Page Intro -->
-			<div class="page-intro bg-color--green">
+<div role="main" class="main">
+	<div class="container">
+		{{widget('blogpostlist', 'allblogposts', {})|raw}}
+	</div>
+</div>
 
-				<div class="container">
 
-					{{widget('content', 'blog-intro_title', {"content":'<h1>Basekit Developer Blog</h1><p>Stay up to date with the latest theme, community and technical news.</p>'})|raw}}
 
-				</div>
+<!-- FOOTER -->
 
-			</div>
-
-		</div>
-
-	</section>
-	<!-- End Top Section -->
-
-	<!-- Feature Blocks -->
-	<section role="main" class="developer-blog">
-
-		{{widget('blogpostlist', 'blogpostlist1', {})|raw}}
-		
-	</section>
-	<!-- End Developer Blog -->
-
-</section>
-<!-- End Page Content -->
+{% include 'includes/footer.twig' %}
 
 {% endblock %}

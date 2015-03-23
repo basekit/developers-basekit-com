@@ -2,36 +2,25 @@
 
 {% block content %}
 
-<!-- Signup / Login Overlay -->
-{% include "includes/form-overlay.twig" %}
 
-<!-- Sidebar Pullout Menu -->
-{% include "includes/sidebar-pullout.twig" %}
+<!-- HEADER & NAVIGATION -->
 
-<!-- Page Content -->
-<section id="page-content" class="page-content">
+{% include 'includes/header.twig' %}
 
-	<section class="top-section">
 
-		<div class="container">
 
-			<!-- Theme Header -->
-			{% include "includes/header.twig" %}
+<!-- MAIN SECTION -->
 
-		</div>
-
-	</section>
-	<!-- End Top Section -->
-
-	<!-- Feature Blocks -->
-	<section role="main" class="main">
-
+<div role="main" class="main">
+	<div class="container">
 		{{zone('main')|raw}}
+	</div>
+</div>
 
-	</section>
-	<!-- End Developer Blog -->
 
-</section>
-<!-- End Page Content -->
+
+<!-- FOOTER -->
+
+{% include 'includes/footer.twig' %}
 
 {% endblock %}

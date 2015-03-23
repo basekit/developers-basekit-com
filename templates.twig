@@ -1,0 +1,396 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+<!-- HEADER - NAV SMALL -->
+
+<div class="header-feature">
+
+	<header class="header" role="banner">
+	    <div class="container">
+	    	<div class="row">
+
+	    	<!-- Logo -->
+		        <div class="four columns">
+	                <a href="/home" class="logo">
+	                	<img src="{{asset('images/basekit-logo.svg')}}" alt="BaseKit">
+	                </a>
+		        </div>
+
+		        <!-- Mobile Navigation Toggle -->
+		        <div class="nav-toggle toggle"><span></span></div>
+
+		        <!-- Navigation -->
+		        <div class="eight columns">
+		        	<nav class="nav">
+			            <ul>
+			                <li><a target="_blank" href="http://docs.basekit.com/">Docs</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a target="_blank" href="http://knowledge.basekit.com/">Knowledge</a></li>
+							<li><a href="/faq">FAQ</a></li>
+							<li><a href="#login" class="button small outline">Login</a></li>
+			            </ul>
+		            </nav>
+
+		        </div>
+
+		    </div>
+	    </div>
+	</header>
+
+	<!-- Feature -->
+	<div class="feature small templates">
+	    <div class="feature-content">
+	        <div class="container">
+	        	{{widget('content', 'feature-heading', {"content":'<h1>Select your template</h1><h4>Tour through our template library, select the one you love and get building. Have the freedom to switch templates at any time.</h4>'})|raw}}
+	        </div>
+	    </div>
+	</div>
+
+</div>
+
+
+
+<!-- SIGNUP / LOGIN OVERLAY -->
+
+{% include 'includes/signup-login-overlay.twig' %}
+
+
+
+<!-- MAIN SECTION -->
+
+<div role="main" class="main">
+
+	<div class="container">
+
+		<section class="template-list">
+
+		    <div class="template">
+		        <a href="signup.php?theme=558" class="template-link" target="_parent">
+		        	<img class="template-thumbnail" src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/unknown/unknown.png" alt="">
+		            <h5 class="template-name">Unknown</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=770" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/roots/roots.png" alt="">
+		            <h5 class="template-name">Roots</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=561" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/nordic/nordic.png" alt="">
+		            <h5 class="template-name">Nordic</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=564" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/verbier/verbier.png" alt="">
+		            <h5 class="template-name">Verbier</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=795" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/on-the-shore/on-the-shore.png" alt="">
+		            <h5 class="template-name">On the Shore</h5>
+		        </a>
+		    </div>
+
+		   <div class="template">
+		        <a href="signup.php?theme=559" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/transition/transition.png" alt="">
+		            <h5 class="template-name">Transition</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=772" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/keystone/keystone.png" alt="">
+		            <h5 class="template-name">Keystone</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=619" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/atlantic/atlantic.png" alt="">
+		            <h5 class="template-name">Atlantic</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=674" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/quest/quest.png" alt="">
+		            <h5 class="template-name">Quest</h5>
+		        </a>
+		    </div>
+
+
+		    <div class="template">
+		        <a href="signup.php?theme=562" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/oliver/oliver.png" alt="">
+		            <h5 class="template-name">Oliver Thames</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=631" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/surf-love/surfandlove.png" alt="">
+		            <h5 class="template-name">Surf and Love</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=990" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/techdesk/techdesk.png" alt="">
+		            <h5 class="template-name">Techdesk</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=630" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/desktop/desktop.png" alt="">
+		            <h5 class="template-name">Desktop</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=779" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/explore/explore.png" alt="">
+		            <h5 class="template-name">Explore</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=560" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/square/square.png" alt="">
+		            <div class="template-name">Square</div>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=565" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/selection/selection.png" alt="">
+		            <h5 class="template-name">Selection</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=615" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/spiritus/spiritus.png" alt="">
+		            <h5 class="template-name">Spiritus</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=616" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/bernadett/bernadett.png" alt="">
+		            <h5 class="template-name">Bernadett</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=617" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/adventure/adventure.png" alt="">
+		            <h5 class="template-name">Adventure</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=563" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/portrait/portrait.png" alt="">
+		            <h5 class="template-name">Portrait</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=618" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/faaber/thumbnail.png" alt="">
+		            <h5 class="template-name">Faaber</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=632" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/summerblue/summerblue.png" alt="">
+		            <h5 class="template-name">Summer Blue</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=633" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/south-peaks/south-peaks.png" alt="">
+		            <div class="template-name">South Peaks</div>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=634" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/sarasota/thumbnail.png" alt="">
+		            <h5 class="template-name">Sarasota</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=674" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/panorama/panorama.png" alt="">
+		            <h5 class="template-name">Panorama</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=676" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/alexander/alexander.png" alt="">
+		            <h5 class="template-name">Alexander</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=677" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/particle/particle.png" alt="">
+		            <h5 class="template-name">Particle</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=678" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/mikkeli/mikkeli.png" alt="">
+		            <h5 class="template-name">Mikkeli</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=771" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/tallships/tallships.png" alt="">
+		            <h5 class="template-name">Tallships</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=773" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/range/range.png" alt="">
+		            <h5 class="template-name">Range</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=774" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/wilderness/wilderness.png" alt="">
+		            <h5 class="template-name">Wilderness</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=775" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/wedding-day/wedding-day.png" alt="">
+		            <h5 class="template-name">Wedding Day</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=776" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/meadow-sunset/meadow-sunset.png" alt="">
+		            <h5 class="template-name">Meadow Sunset</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=777" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/organic/organic.png" alt="">
+		            <h5 class="template-name">Organic</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=778" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/interact/interact.png" alt="">
+		            <h5 class="template-name">Interact</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=793" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/wheninrome/wheninrome.png" alt="">
+		            <h5 class="template-name">When in Rome</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=794" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/eagle-scout/thumbnail.png" alt="">
+		            <h5 class="template-name">Eagle Scout</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=796" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/supply/thumbnail.png" alt="">
+		            <h5 class="template-name">Supply</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=797" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/swan/swan.png" alt="">
+		            <h5 class="template-name">Swan</h5>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=909" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/limited/limited.png" alt="">
+		            <div class="template-name">Limited</div>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=955" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/views/views.png" alt="">
+		            <div class="template-name">Views</div>
+		        </a>
+		    </div>
+
+		    <div class="template">
+		        <a href="signup.php?theme=956" class="template-link" target="_parent">
+		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/house-blend/house-blend.png" alt="">
+		            <div class="template-name">House Blend</div>
+		        </a>
+		    </div>
+
+		</section>
+
+	</div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+{% include 'includes/footer.twig' %}
+
+{% endblock %}
+
+
+{% block scripts %}
+
+	<!-- IMAGESLOADED -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+
+	<!-- MASONRY -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.2.1/masonry.pkgd.min.js"></script>
+
+	<script>
+		var container = document.querySelector('.template-list');
+		imagesLoaded( container, function() {
+			var msnry = new Masonry( container, {
+				itemSelector: '.template'
+			});
+		});
+	</script>
+
+{% endblock %}

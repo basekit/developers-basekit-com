@@ -1,0 +1,296 @@
+// -----------------------------
+// 	Signup Overlay
+// -----------------------------
+
+
+// Full Screen Overlay
+.dev-overlay {
+	display: block;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	z-index: 999;
+	.transition(all, 0.35s, ease-in-out);
+	h2, h3 {
+		color: @white;
+	}
+	h2 {
+		margin-bottom: 65px;
+		text-align: center;
+
+		@media @mobile {
+			margin-bottom: 30px;
+		}
+	}
+	p {
+		//color: lighten(@dark-grey, 10%);
+	}
+	.vertical-center {
+		@media @mobile {
+			display: block;
+			padding-top: 110px;
+		}
+	}
+	.icon-close, .container {
+		opacity: 0;
+		visiblity: hidden;
+	}
+	img {
+		opacity: 0.75;
+		width: 100%;
+	}
+	.widget.blogpost, .widget.blogpostlist {
+		display: none;
+	}
+}
+
+// Signup Flow Choices
+.signup-choice {
+	.transition(opacity, 0.5s, ease-out);
+	text-decoration: none;
+	img {
+		opacity: 0.5;
+		.transition(opacity, 0.5s, ease-out);
+	}
+	&:hover, &:hover > img {
+		opacity: 1;
+	}
+}
+
+// Overlay Container
+.dev-overlay-container {
+	opacity: 0;
+ }
+
+// Overlay Target
+.dev-overlay:target {
+	display: block;
+	pointer-events: auto;
+  	background: @black;
+
+	.container, .icon-close {
+		.transition(all, 0.65s, ease-in-out);
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// Close Icom
+.icon-close {
+	color: lighten(@black, 25%);
+	font-size: 44px;
+	position: absolute;
+	right: 50px;
+	text-decoration: none;
+	top: 30px;
+	z-index: 9999;
+
+	@media @mobile {
+		right: 6%;
+		top: 20px;
+	}
+
+	&:after {
+		content: "X";
+		font-size: 46px;
+		font-weight: 200;
+
+		@media @mobile {
+			font-size: 32px;
+		}
+	}
+
+	&:hover {
+		color: @white; 
+	}
+}
+
+
+
+// -----------------------------
+// 	Signup Form
+// -----------------------------
+
+
+// Form Section
+.signup-form {
+	background-color: @black;
+	h2 {
+		margin-bottom: 10px;
+	}
+	h4 {
+		padding-bottom: 30px!important;
+
+		@media @mobile {
+			padding-bottom: 15px!important;
+		}
+	}
+
+	// Form
+	form {
+		background-color: @white;
+		.border-radius(6px);
+		border: 1px solid darken(@grey, 5%);
+		display: block;
+		padding: 50px 40px;
+		margin: 0 auto;
+		max-width: 450px;
+
+		@media @mobile {
+			padding: 30px 30px 35px;
+		}
+	}
+
+	input {
+		border: 1px solid #e1e1e1;
+		.border-radius(4px);
+		color: #838383;
+		display: block;
+		font-size: 16px;
+		margin-bottom: 20px;
+		margin-right: 0.6em;
+		height: 55px;
+		text-indent: 15px;
+		.transition(all, 0.5s, ease-out);
+		width: 100%;
+	}
+
+	button {
+		border: none;
+		margin-top: 8px;
+		padding: 16px 20px;
+		width: 100%;
+	}
+}
+
+// Terms & Conditions
+.terms {
+	display: block;
+	padding: 20px 50px 0;
+	margin: 0 auto;
+	max-width: 450px;
+	p {
+		color: @dark-grey;
+		font-size: 15px;
+		margin-bottom: 0;
+	}
+	a {
+		color: lighten(@dark-grey, 15%);
+		font-size: 15px;
+		margin-left: 2px;
+	}
+}
+
+
+
+// -----------------------------
+// 	Login Form
+// -----------------------------
+
+
+// Login Form
+.login-form {
+	.row {
+		width: 100%;
+	}
+	h2 {
+		margin-bottom: 30px;
+	}
+	fieldset, p {
+		display: block;
+		margin: 0 auto;
+		max-width: 600px;
+	}
+	fieldset {
+		border: none;
+		padding-bottom: 0;
+	}
+	label, input {
+		display: block;
+		width: 100%;
+	}
+	label {
+		color: @dark-grey;
+		margin-bottom: 6px;
+	}
+	input {
+		border: 1px solid #e1e1e1;
+		.border-radius(4px);
+		color: #838383;
+		display: block;
+		font-size: 16px;
+		margin-bottom: 20px;
+		height: 55px;
+		text-indent: 15px;
+		.transition(all, 0.5s, ease-out);
+		width: 100%;
+	}
+	button {
+		background-color: @green;
+		border: none;
+		.border-radius(4px);
+		color: @white;
+		font-size: 15px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-bottom: 12px;
+		margin-top: 10px;
+		height: 60px;
+		padding: 16px 20px;
+		width: 100%;
+		text-transform: uppercase;
+	}
+	.password-mask-toggle {
+		background-color: rgba(0,0,0, 0.2);
+		display: block;
+		top: 68px;
+		right: 10px;
+		width: 55px;
+		background-color: gainsboro;
+		font-size: 14px;
+		position: absolute;
+		text-align: center;
+		height: 25px;
+		padding: 0;
+		z-index: 9999;
+	}
+	// Error Message
+	.error {
+		color: lighten(@dark-grey, 15%);
+		display: none;
+		font-size: 16px;
+		margin: 0 0 10px;
+		position: relative;
+		text-align: center;
+		&:before {
+			  border-radius: 50px;
+			  color: #ff1a1a;
+			  content: "!";
+			  display: inline-block;
+			  font-size: 16px;
+			  font-weight: 400;
+			  line-height: 22px;
+			  position: relative;
+			  height: 22px;
+			  width: 22px;
+			  background-color: #f23333;
+			  color: @white;
+			  position: absolute;
+			  right: 15px;
+			  top: -60px;
+		}
+		&.submission {
+			margin: 8px 0 0;
+		}
+	}
+	p {
+		margin-top: 10px;
+		text-align: center;
+	}
+	a {
+		color: lighten(@dark-grey, 15%);
+	}
+}

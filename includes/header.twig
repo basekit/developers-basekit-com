@@ -1,15 +1,37 @@
-<header class="theme-header  clearfix">		
+<header class="header" role="banner">
+    <div class="container">
+    	<div class="row">
 
-	<!-- Theme Logo -->
-	<div class="logo-container">
-		<a href="/"><img src="{{asset('images/logo.png')}}" class="logo-image"></a>
-		<h3 class="logo-headline">/ Developer Portal</h3>
-	</div>
+    	<!-- Logo -->
+	        <div class="four columns">
+                <a href="/home" class="logo">
+                	<img src="{{asset('images/basekit-logo.svg')}}" alt="BaseKit">
+                </a>
+	        </div>
 
-	<!-- Account Buttons -->
-	<div class="account-buttons">
-		<a href="#developer-signup" class="button  button--green">Sign up</a>
-		<a href="#developer-login" class="button  button--orange">Log in</a>
-	</div>
+	        <!-- Mobile Navigation Toggle -->
+	        <div class="nav-toggle toggle"><span></span></div>
 
+	        <!-- Navigation -->
+	        <div class="eight columns">
+	        	<nav class="nav">
+		            <ul>
+		                <li><a target="_blank" href="http://docs.basekit.com/">Docs</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li><a target="_blank" href="http://knowledge.basekit.com/">Knowledge</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="#login" class="button small outline">Login</a></li>
+		            </ul>
+	            </nav>
+
+	        </div>
+
+	    </div>
+    </div>
 </header>
+
+
+
+<!-- SIGNUP / LOGIN OVERLAY -->
+
+{% include 'includes/signup-login-overlay.twig' %}

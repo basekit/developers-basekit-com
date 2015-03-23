@@ -2,106 +2,238 @@
 
 {% block content %}
 
-<!-- Signup / Login Overlay -->
-{% include "includes/form-overlay.twig" %}
 
-<!-- Sidebar Pullout Menu -->
-{% include "includes/sidebar-pullout.twig" %}
+<!--- HEADER - FEATURE -->
 
-<!-- Page Content -->
-<section id="page-content" class="page-content">
+{% include 'includes/header-large.twig' %}
 
-	<section class="top-section">
 
+
+<!-- MAIN SECTION -->
+
+<div role="main" class="main">
+
+	<!-- Technologies Section -->
+	<section class="technology">
 		<div class="container">
 
-			<!-- Theme Header -->
-			{% include "includes/header.twig" %}
-
-			<!-- Page Intro -->
-			<div class="page-intro">
-
-				<div class="container">
-
-					{{widget('content', 'page-intro_title', {"content":'<h1>Let&#39;s Build Better. Together</h1><p>The BaseKit Developer Portal: Your space to learn, work and play alongside fellow developers.</p>'})|raw}}
-
+			<div class="row">
+				<div class="twelve columns text-center">
+					{{widget('content', 'technology-heading', {"content":'<h2>Build the way you want</h2><h4>Drop the learning curve and use the tools you love to create the sites you want.</h4>'})|raw}}
 				</div>
+			</div>
 
+			<!-- Technologies Slider -->
+    		{% include 'includes/tech-slider.twig' %}
+
+		</div>
+	</section>
+
+
+	<!-- Developer Resources Section -->
+	<section class="resources">
+		<div class="container">
+
+			<div class="row">
+				<div class="twelve columns text-center">
+					{{widget('content', 'resources-heading', {"content":'<h2>Hassle free web building</h2><h4>A simple set up, painless building and an effortless way to publish your site.</h4>'})|raw}}
+				</div>
+			</div>
+
+			<div class="row">
+				<ul>
+					<li>
+						<div class="resources-icon">
+							<svg width="62px" height="50px">
+							    <switch>
+							        <use xlink:href="#documentation"></use>
+							    </switch>
+							</svg>
+						</div>
+												
+						{{widget('content', 'resources-heading', {"content":'<h3>Documentation</h3><p>Stuck at step one? Hit a wall while building? We’ve got documentation for that. Read our growing collection of guides and problem solvers here.</p>'})|raw}}
+					</li>
+					<li>
+						<div class="resources-icon">
+							<svg width="62px" height="70px">
+							    <switch>
+							        <use xlink:href="#time-saving"></use>
+							    </switch>
+							</svg>
+						</div>
+						
+						{{widget('content', 'resources-heading', {"content":'<h3>Reduce development time</h3><p>Our large selection of templates will mean you can get building with speed, or simply start from scratch with our Baseplate.</p>'})|raw}}
+					</li>
+					<li>
+						<div class="resources-icon">
+							<svg width="62px" height="50px">
+							    <switch>
+							        <use xlink:href="#knowledge"></use>
+							    </switch>
+							</svg>
+						</div>
+						
+						{{widget('content', 'resources-heading', {"content":'<h3>Knowledge</h3><p>Question the team thats builds with BaseKit everyday. Our experts are here to support you.</p>'})|raw}}
+					</li>
+					<li>
+						<div class="resources-icon">
+							<svg width="60px" height="50px">
+							    <switch>
+							        <use xlink:href="#control"></use>
+							    </switch>
+							</svg>
+						</div>
+						
+						{{widget('content', 'resources-heading', {"content":'<h3>Flexbility and ultimate control</h3><p>The power is in your hands to give your clients as much, or as little, editing control as you like. Design your way.</p>'})|raw}}
+					</li>
+					<li>
+						<div class="resources-icon">
+							<svg width="62px" height="60px">
+							    <switch>
+							        <use xlink:href="#faq"></use>
+							    </switch>
+							</svg>
+						</div>
+						
+						{{widget('content', 'resources-heading', {"content":'<h3>FAQs</h3><p>We promise this page won’t collect virtual dust! It’s regularly updated with your latest questions.</p>'})|raw}}
+					</li>
+					<li>
+						<div class="resources-icon">
+							<svg width="60px" height="75px">
+							    <switch>
+							        <use xlink:href="#work-smarter"></use>
+							    </switch>
+							</svg>
+						</div>
+						
+						{{widget('content', 'resources-heading', {"content":'<h3>Work smarter, not harder</h3><p>Our Template viewer works offline to enable you to create and update your code no matter where you are.</p>'})|raw}}
+					</li>
+				</ul>
 			</div>
 
 		</div>
-
 	</section>
-	<!-- End Top Section -->
 
-	<!-- Feature Blocks -->
-	<section role="main" class="feature-blocks">
 
-		<!-- Documentation -->
-		<article class="feature-item  bg-color--blue  graphic  graphic--clouds">
 
-			{{widget('content', 'feature-item_documentation_title', {"content":'<h2>Documentation</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_documentation_description', {"content":'<p>Tips, tricks and FAQs to support your development needs.</p>'})|raw}}
-			<a href="http://docs.basekit.com" target="_blank" class="button  white  button--blue">View docs</a>
-			<a href="/faqs" target="" class="button  white  button--blue">View FAQs</a>
+	<!-- THEME SHOWCASE SECTION -->
 
-		</article>
+	<section class="theme-showcase">
+		<div class="container">
 
-		<!-- Developer Sign Up -->
-		<article class="feature-item  bg-color--green  graphic  graphic--code">
+			<div class="row">
+				<div class="twelve columns text-center">
+					{{widget('content', 'showcase-heading', {"content":'<h2>Template showcase</h2><h4>Designed with you and your clients in mind.</h4>'})|raw}}
+				</div>
+			</div>
 
-			{{widget('content', 'feature-item_dev-signup_title', {"content":'<h2>Developer Sign Up</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_dev-signup_description', {"content":'<p>Sign up, set up then swiftly start building your site. Simple.</p>'})|raw}}
-			<a href="#developer-signup" class="button  white  button--green">Create an account</a>
+			<!-- Theme Showcase Slider !-->
+    		{% include 'includes/theme-slider.twig' %}
 
-		</article>
-
-		<!-- Editor Tour -->
-		<article class="feature-item  bg-color--orange  graphic  graphic--ed-tour">
-
-			{{widget('content', 'feature-item_editor-tour_title', {"content":'<h2>Editor Tour</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_editor-tour_description', {"content":'<p>An overview of BaseKit’s Editor in all of its site building glory.</p>'})|raw}}
-			<a href="http://www.basekit.com/tour" target="_blank" class="button  white  button--orange">Take the editor tour</a>
-
-		</article>
-
-		<!-- Knowledge Forum -->
-		<article class="feature-item  bg-color--blue  graphic  graphic--knowledge">
-
-			{{widget('content', 'feature-item_knowledge_title', {"content":'<h2>Knowledge Forum</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_knowledge_description', {"content":'<p>This is the fancy name we give to our discussion and help forum.</p>'})|raw}}
-			<a href="http://knowledge.basekit.com" target="_blank" class="button  white  button--blue">View knowledge forum</a>
-
-		</article>
-
-		<!-- Developer Blog -->
-		<article class="feature-item  bg-color--green  graphic  graphic--dev-blog">
-
-			{{widget('content', 'feature-item_dev-blog_title', {"content":'<h2>Developer Blog</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_dev-blog_description', {"content":'<p>Informative, useful and inspirational articles only, we promise.</p>'})|raw}}
-			<a href="/blog" class="button  white  button--green">View the developer blog</a>
-
-		</article>
-
-		<!-- Theme Viewer Tour -->
-		<article class="feature-item  bg-color--orange  graphic  graphic--tv-tour">
-
-			{{widget('content', 'feature-item_theme-viewer_title', {"content":'<h2>Theme Viewer Tour</h2>'})|raw}}
-			<hr class="divider">
-			{{widget('content', 'feature-item_theme-viewer_description', {"content":'<p>View your code changes locally without uploading, downloading, toing and froing.</p>'})|raw}}
-			<a href="http://docs.basekit.com/getting-started/downloading/" target="_blank" class="button  white  button--orange">Take the theme viewer tour</a>
-
-		</article>
-
+		</div>
 	</section>
-	<!-- End Feature Blocks -->
 
+
+
+	<!-- FEATURES -->
+
+	<section class="features">
+		<div class="container">
+
+			<div class="row">
+				<div class="six columns">
+					{{widget('content', 'features-heading', {"content":'<h2>Client friendly solutions</h2>'})|raw}}
+					{{widget('content', 'features-heading', {"content":'<p>We understand that your customers all have different desires, whether it’s needing somewhere to have their voice heard online, an authentic looking menu for their busy restaurant or a shop to sell products online - let us help you find the right solution.</p>'})|raw}}
+				</div>
+				<div class="six columns features-illustrations">
+
+					<div class="features-icon">
+						<svg width="160px" height="125px">
+						    <switch>
+						        <use xlink:href="#ecommerce-icon"></use>
+						    </switch>
+						</svg>
+					</div>
+
+					<div class="features-icon">
+						<svg width="150px" height="150px">
+						    <switch>
+						        <use xlink:href="#blog-icon"></use>
+						    </switch>
+						</svg>
+					</div>
+
+					<div class="features-icon">
+						<svg width="155px" height="120px">
+						    <switch>
+						        <use xlink:href="#menu-icon"></use>
+						    </switch>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="six columns features-illustrations">
+
+					<div class="features-icon">
+						<svg width="155px" height="145px">
+						    <switch>
+						        <use xlink:href="#drag-and-drop"></use>
+						    </switch>
+						</svg>
+					</div>
+
+					<div class="features-icon">
+						<svg width="155px" height="115px">
+						    <switch>
+						        <use xlink:href="#customer-support"></use>
+						    </switch>
+						</svg>
+					</div>
+
+					<div class="features-icon">
+						<svg width="145px" height="110px">
+						    <switch>
+						        <use xlink:href="#image-editing"></use>
+						    </switch>
+						</svg>
+					</div>
+
+				</div>
+				<div class="six columns">
+					{{widget('content', 'features-heading-2', {"content":'<h2>A powerful, easy to use CMS</h2>'})|raw}}
+					{{widget('content', 'features-heading-2', {"content":'<p>BaseKit offers your client full customer support, photo editing and live editing with drag and drop capabilities, all without the need for unreliable plugins. Handing over a website to your clients has never been easier.</p>'})|raw}}
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+</div>
+
+
+
+<!-- SIGN UP -->
+
+<section class="sign-up">
+	<div class="container">
+
+		<div class="row">
+			<div class="twelve columns text-center">
+				{{widget('content', 'signin-heading', {"content":'<h2>Get Started</h2>'})|raw}}
+				{{widget('content', 'signin-button', {"content":'<a href="#signup" class="button large green">Sign Up</a><p>Already have an account? <a href="#">Sign in here</a></p>'})|raw}}
+			</div>
+		</div>
+
+	</div>
 </section>
-<!-- End Page Content -->
+
+
+
+<!-- FOOTER -->
+
+{% include 'includes/footer.twig' %}
 
 {% endblock %}

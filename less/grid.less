@@ -1,0 +1,127 @@
+// -----------------------------
+// 	Grid
+// -----------------------------
+
+
+
+// Clearfix
+// -------------------------
+
+.container:after,
+.row:after,
+.u-cf {
+	content: "";
+	display: table;
+	clear: both; 
+}
+
+
+// 	Container
+// -------------------------
+
+.container {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0 25px;
+	position: relative;
+	max-width: 1200px;
+	width: 100%;
+
+	/* For devices smaller than 650px */
+	@media @mobile {
+		padding: 0;
+		width: 90%;
+	}
+}
+
+
+// 	Twelve Column Grid
+// -------------------------
+
+.columns {
+	box-sizing: border-box; 
+	float: left;
+	margin-left: 4%;
+	width: 100%;
+	&:first-child {
+		margin-left: 0;
+	}
+	.img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+// Adds columns attributes to all column widths
+
+.one, 
+.two, 
+.three, 
+.four, 
+.five, 
+.six, 
+.seven, 
+.eight, 
+.nine, 
+.ten, 
+.eleven, 
+.twelve {
+	.columns;
+}
+
+
+// Column widths
+
+.one		{ width: 4.66666666667%; }
+.two		{ width: 13.3333333333%; }
+.three		{ width: 22%;            }
+.four		{ width: 30.6666666667%; }
+.five		{ width: 39.3333333333%; }
+.six		{ width: 48%;            }
+.seven		{ width: 56.6666666667%; }
+.eight		{ width: 65.3333333333%; }
+.nine		{ width: 74.0%;          }
+.ten		{ width: 82.6666666667%; }
+.eleven		{ width: 91.3333333333%; }
+.twelve 	{ width: 100%; margin-left: 0; }
+
+.twelve {
+	>* {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 860px;
+	}
+}
+
+
+// Column widths for smaller devices
+
+.one, 
+.two, 
+.three, 
+.four, 
+.five, 
+.six, 
+.seven, 
+.eight, 
+.nine, 
+.ten, 
+.eleven {
+
+	/* For devices smaller than 860px */
+	@media @tablet {
+		width: 48%;
+		&:nth-child(odd) {
+			margin-left: 0;
+		}
+	}
+
+	/* For devices smaller than 650px */
+	@media @mobile {
+		margin-left: 0;
+		width: 100%;
+	}
+}

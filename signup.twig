@@ -1,0 +1,68 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+<!-- HEADER -->
+
+{% include 'includes/header.twig' %}
+
+
+
+<!-- MAIN SECTION -->
+
+<div role="main" class="main">
+
+	<section class="signup-form">
+		<div class="container">
+			<div class="row">
+
+				<div id="form-error" class="hidden alert alert-danger" role="alert">
+					<p><strong>Oh dear!</strong> Does this account already exist?</p>
+				</div>
+
+				<form role="form" id="register_form" action="http://basekit.dekk.io/register" method="POST">
+
+					<div class="twelve columns text-center">
+						{{widget('content', 'signup-heading', {"content":'<h2>Sign up, its free</h2><h4>Create your website today.</h4>'})|raw}}
+					</div>
+
+					<input type="hidden" id="themeRef" name="themeRef" value="<?php echo intval($_GET['theme']);  ?>">
+
+					<div class="form-group">
+						<input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+					</div>
+
+					<div class="form-group">
+						<input type="password" class="form-control" id="password" placeholder="Create a password" name="password">
+					</div>
+					
+					<button id="register-button" type="submit" class="button green">Сontinue</button>
+
+				</form>
+
+				<div class="terms text-center">
+					<p>By continuing, you're confirming to our <a href="http://www.basekit.com/terms-and-conditions">Terms and Conditions</a></p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+{% include 'includes/footer.twig' %}
+
+{% endblock %}
+
+
+{% block scripts %}
+
+	<!-- SIGN UP -->
+	<script src="{{asset('js/signup.js')}}"></script>
+
+{% endblock %}

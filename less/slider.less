@@ -1,0 +1,350 @@
+/*
+ *
+ * Swiper 3.0.4 - Vladimir Kharlampidi
+ * 
+ * http://www.idangero.us/swiper/
+ * 
+ * Copyright 2015 - Released on: March 6, 2015
+ *
+ */
+
+
+ //  Slideshow Container / Wrapper
+// --------------------------------
+
+.swiper-container {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	/* Fix of Webkit flickering */
+	z-index: 1;
+}
+
+.swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-ms-transition-property: -ms-transform;
+	transition-property: transform;
+	-webkit-transform: translate3d(0px, 0, 0);
+	-moz-transform: translate3d(0px, 0, 0);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate3d(0px, 0, 0);
+	transform: translate3d(0px, 0, 0);
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	@media @mobile {
+		max-height: 350px;
+	}
+}
+
+.swiper-slide {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-flex-shrink: 0;
+	-ms-flex: 0 0 auto;
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	img {
+		display: block;
+		margin: 20px auto 0;
+	}
+}
+
+.tech-swiper .swiper-slide img {
+	@media @mobile {
+		max-width: 165%;
+	}
+}
+
+/* IE10 Windows Phone 8 Fixes */
+
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+	touch-action: pan-x;
+}
+
+
+// 	Slideshow Arrows
+// ----------------------
+
+.swiper-button-prev,
+.swiper-button-next {
+	border: 2px solid fade(@black, 15%);
+	.border-radius(4px);
+	position: absolute;
+	top: 50%;
+	width: 32px;
+	height: 52px;
+	line-height: 58px;
+	padding: 0 10px;
+	z-index: 10;
+	cursor: pointer;
+	-moz-background-size: 27px 44px;
+	-webkit-background-size: 27px 44px;
+	background-size: 27px 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	text-align: center;
+	visibility: visible;
+	@media @mobile {
+		background-color: @grey;
+		border: 0;
+		opacity: 0.5;
+		height: 60px;
+		width: 30px;
+	}
+	&:before {
+		color: fade(@black, 50%);
+		font-size: 28px;
+		position: relative;
+	}
+	&.swiper-button-disabled {
+		height: 0;
+		opacity: 0;
+		visability: hidden;
+	}
+}
+
+// Previous Button
+
+.swiper-button-prev {
+	left: 0;
+	&:before {
+		content:"<";
+	}
+}
+
+// Next Button
+
+.swiper-button-next {
+	right: 0;
+	&:before {
+		content:">";
+	}
+}
+
+
+// 	Slideshow Pagination
+// ----------------------
+
+.swiper-pagination {
+	padding-top; 20px;
+	text-align: center;
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	transition: 300ms;
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	z-index: 10;
+}
+
+.swiper-pagination.swiper-pagination-hidden {
+	opacity: 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+}
+.swiper-container-horizontal > .swiper-pagination {
+	margin: 15px 0 10px;
+	width: 100%;
+}
+
+// Pagination Selected Arrow
+
+.arrow {
+	position: relative;
+}
+
+.arrow:after, .arrow:before {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow:after {
+	border-bottom-color: #e0e1e1;
+	border-width: 12px;
+}
+
+// Custom Pagination Bullets
+
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+	border-right: 1px solid gainsboro;
+	padding: 0 60px 0 50px;
+	@media @mobile {
+		border: none;
+		display: block;
+		margin: 0;
+		padding: 15px 30px;
+		&:nth-child(2) {
+			border-top: 1px solid darken(@grey, 5%);
+			border-bottom: 1px solid darken(@grey, 5%);
+		}
+	}
+	&:before {
+		display: inline-block;
+		margin-right: 12px;
+		height: 20px;
+		width: 22px;
+		vertical-align: text-bottom;
+	}
+	&:after {
+		color: lighten(@black, 40%);
+		font-size: 16px;
+	}
+
+	// Hide Selected State Arrow
+	.arrow {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	// Slider Pagination Icon / Text Active State
+	&.swiper-pagination-bullet-active {
+
+		// HTML Icon
+		&:first-child {
+			&:before {
+				background: url("../images/illustrations/html-hover.svg") no-repeat;
+			}
+			&:after {
+				color: #ef7833;
+			}
+		}
+
+		// CSS Icon
+		&:nth-child(2) {
+			&:before {
+				background: url("../images/illustrations/css-hover.svg") no-repeat;
+			}
+			&:after {
+				color: #139bd5;
+			}
+		}
+
+		// JS Icon
+		&:nth-child(3) {
+			&:before {
+				background: url("../images/illustrations/js-hover.svg") no-repeat;
+			}
+			&:after {
+				color: #f1bf26;
+			}
+		}
+
+		// Show Selected State Arrow
+		.arrow {
+			bottom: -6px;
+			position: absolute;
+			opacity: 1;
+			visibility: visible;
+
+			@media @mobile {
+				display: none;
+				visibility: hidden;
+			}
+		}
+	}
+
+	// HTML Text + Icon
+
+	&:first-child {
+		.icon {
+			content: "\f13b";
+		}
+		&:before {
+			background: url("../images/illustrations/html.svg") no-repeat;
+			content: "";
+		}
+		&:after {
+			content: "HTML";
+		}
+	}
+
+	// CSS Text + Icon
+
+	&:nth-child(2) {
+		.icon {
+			content: "\f13c";
+		}
+		&:before {
+			background: url("../images/illustrations/css.svg") no-repeat;
+			content: "";
+		}
+		&:after {
+			content: "CSS / LESS";
+		}
+	}
+
+	// JS Text + Icon
+
+	&:nth-child(3) {
+		border-right: none;
+		.icon {
+			content: "\f121";
+		}
+		&:before {
+			background: url("../images/illustrations/js.svg") no-repeat;
+			content: "";
+		}
+		&:after {
+			content: "JS";
+		}
+	}
+}
+
+
+// 	Slider Face Effect
+// --------------------
+
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.swiper-container-fade .swiper-slide {
+	pointer-events: none;
+}
+
+.swiper-container-fade .swiper-slide-active {
+	pointer-events: auto;
+}

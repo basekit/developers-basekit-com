@@ -1,0 +1,56 @@
+<!-- DEVELOPER SIGNUP OVERLAY -->
+
+<div id="signup" class="dev-overlay">
+
+	<a href="#close" class="icon-close"></a>
+	
+	<div class="container vertical-center">
+
+		<!-- Intro Header -->
+		<div class="row">
+			<h2 class="twelve columns">Choose your own way to get started</h2>
+
+			<div class="row">
+				<!-- Start With a Template -->
+				<div class="six columns">
+					<a class="signup-choice" href="/templates">
+						<img src="{{asset('images/themes/theme-masonry.png')}}">
+						<h3>BaseKit Template</h3>
+						<p>Open up the code to one of our professionally built templates and have the freedom to adapt and build as you please. Explore our library and fit the needs of your client with this speedy and efficient start.</p>
+					</a>
+				</div>
+
+				<!-- Start With The Baseplate -->
+				<div class="six columns">
+					<a class="signup-choice" href="/baseplate">
+						<img src="{{asset('images/themes/theme-masonry.png')}}">
+						<h3>BaseKit Baseplate</h3>
+						<p>Prefer to start with the barebones? We’ve created a vanilla template that has enough functionality and structure for you to start building on. Think of it like the “Hello World” example of a BaseKit template.</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<!-- DEVELOPER LOGIN OVERLAY -->
+
+<div id="login" class="dev-overlay login-form">
+
+	<a href="#close" class="icon-close"></a>
+	
+	<div class="container vertical-center">
+
+		<!-- Login Header -->
+		<div class="row">
+			<div class="twelve columns">
+				<h2>Login to your site</h2>
+				{{widget('userlogin','userlogin',{})|raw}}
+				<p>Don't have an account? Click <a href="#signup">here</a> to signup for free.</p>
+			</div>
+		</div>
+
+	</div>
+</div>

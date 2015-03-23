@@ -1,25 +1,666 @@
-// ------------------------------------------
-// BaseKit Developer Portal Theme: Stylesheet
-// ------------------------------------------
-
-// #tdk-toolbar {
-// 	display: none!important;
-// }
-
 // -----------------------------
-// #LESS Includes
+// Table of Contents
 // -----------------------------
 
-@import "@{templateLocal}/less/reset/reset.less";     // Reset
+//  1.   Includes
 
-@import "@{templateLocal}/less/mixins.less";          // Mixins
-@import "@{templateLocal}/less/colors.less";          // Colors
-@import "@{templateLocal}/fonts/fonts.less";          // Fonts
-@import "@{templateLocal}/fonts/icons.less";          // Icons
-@import "@{templateLocal}/less/typography.less";      // Typography
+//	2.	 Global Styles
+//	2.1  -  Buttons 
 
-@import "@{templateLocal}/less/theme.less";           // Theme
-@import "@{templateLocal}/less/buttons.less";         // Buttons
-@import "@{templateLocal}/less/sidebar-pullout.less"; // Sidebar Pullout
-@import "@{templateLocal}/less/blog.less";			  // Blog
+//  3.   Header / Feature
 
+//  4.   Main
+//	4.1  - 	Resources
+//	4.2  - 	Theme Showcase
+//	4.3  - 	Features
+//	4.4  - 	Sign Up
+
+//  5.   Footer
+
+
+
+// -----------------------------
+// 	LESS Includes
+// -----------------------------
+	
+@import "@{templateLocal}/less/normalize.less";     	// Normalize
+
+@import "@{templateLocal}/less/mixins.less";       		// Mixins
+@import "@{templateLocal}/less/grid.less";				// Grid
+@import "@{templateLocal}/less/type.less";      		// Typography
+
+@import "@{templateLocal}/less/signup-login.less";      // Signup Overlay & form
+@import "@{templateLocal}/less/slider.less";      		// Slider Styles
+@import "@{templateLocal}/less/template-list.less";     // Template Picker List
+@import "@{templateLocal}/less/blog.less";				// Blog
+
+
+
+// -----------------------------
+// 	Global Styles
+// -----------------------------
+
+
+// 	Buttons
+// ------------
+
+.button {
+	.border-radius(4px);
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	.transition (all, .5s, ease-in);
+
+	// Small button
+	&.small {
+		padding: 10px 15px;
+	}
+
+	// Large Button
+	&.large {
+		padding: 18px 30px 14px;
+	}
+
+	// Green Button
+	&.green {
+		background-color: @green;
+		color: white;
+		text-shadow: 0px 1px 0px rgb(84, 175, 153, 1);
+		&:hover {
+			background-color: darken(@green, 8%);
+		}
+	}
+
+	// Outline Button
+	&.outline {
+		border: 2px solid fade(@white, 25%);
+		&:hover {
+			border-color: @white;
+		}
+	}
+}
+
+
+
+// -----------------------------
+// 	Header & Feature
+// -----------------------------
+
+
+// Header No Feature
+.header {
+	background-color: @black;
+	position: relative;
+
+	// Logo
+	.logo {
+		display: inline-block;
+		padding: 25px 0 16px;
+	}
+}
+
+// Navigation
+.nav {
+	@media @tablet {
+		height: 0;
+		opacity: 0;
+		visability: hidden;
+		transform-origin: 100% 0%;
+		-webkit-transform: scale(0) translateY(-150px);
+		-moz-transform: scale(0) translateY(-150px);
+		-o-transform: scale(0) translateY(-150px);
+		transform: scale(0) translateY(-150px);
+		.transition(all, .5s, ease);
+		&.active {
+			height: auto;
+			opacity: 1;
+			visability: visible;
+			-webkit-transform: scale(1) translateY(0px);
+			-moz-transform: scale(1) translateY(0px);
+			-o-transform: scale(1) translateY(0px);
+			transform: scale(1) translateY(0px);
+			.transition(all, .5s, ease);
+		}
+	}
+}
+
+.nav ul {
+	margin: 0;
+	padding-left: 0;
+	text-align: right;
+}
+
+.nav li {
+	display: inline-block;
+	&:last-child a {
+		line-height: 20px;
+		margin-left: 10px;
+
+		@media @tablet {
+			line-height: 65px;
+			margin: 0;
+		}
+	}
+
+	@media @tablet {
+		border-bottom: 1px solid fade(@white, 15%);
+		display: block;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+
+.nav a {
+	color: fade(@white, 80%);
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	line-height: 85px;
+	padding: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	&.active, &:hover, &:focus {
+		color: @white;
+	}
+
+	@media @tablet {
+		line-height: 65px;
+		padding: 0;
+		&.button.outline {
+			border: none;
+		}
+	}
+}
+
+// Mobile Navigation Toggle
+@media @tablet {
+	.nav-toggle {
+		position: absolute;
+		top: 30px;
+		right: 25px;
+		cursor: pointer;
+		padding: 10px 32px 10px 0;
+	}
+
+	.nav-toggle span,
+	.nav-toggle span:before,
+	.nav-toggle span:after {
+		border-radius: 6px;
+		height: 2px;
+		width: 32px;
+		background: fade(@white, 70%);
+		position: absolute;
+		display: block;
+		content: "";
+		.transition (all, 0.3s, ease-in-out);
+		&.active {
+			top: 0;
+		}
+	}
+
+	.nav-toggle span:before {
+		top: -8px;
+	}
+
+	.nav-toggle span:after {
+		bottom: -8px;
+	}
+
+	.nav-toggle.active span {
+		background-color: transparent;
+		&:before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+		&:after {
+			bottom: 0;
+			transform: rotate(-45deg);
+		}
+	}
+
+	.nav .button.small {
+		padding: 0;
+	}
+}
+
+@media @mobile {
+	.nav-toggle {
+		right: 0;
+	}
+}
+
+
+// Header & Feature
+.header-feature {
+	position: relative;
+
+	// Header
+	.header {
+		background: transparent;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 2;
+
+		@media @tablet {
+			background-color: @black;
+			position: relative;
+			.four, .eight {
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+// Feature
+.feature {
+	background-color: @black;
+	padding-top: 100px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+
+	// Large Feature
+	&.large {
+		height: 600px;
+
+		@media @mobile {
+			height: 380px;
+		}
+	}
+
+	// Small Feature 
+	&.small {
+		height: 280px;
+	}
+
+	// Homepage Feature
+	&.home {
+		background: url("../images/backgrounds/feature-bg.jpg") @black no-repeat center; 
+	}
+
+	// Templates feature
+
+	h1, h4 {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 860px;
+	}
+
+	h1 {
+		color: @white;
+	}
+	h4 {
+		color: fade(@white, 70%);
+		margin-bottom: 40px;
+	}
+
+	// Div For Vertical Alignment
+	.feature-content {
+		display: table;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+	}
+	.container {
+		display: table-cell;
+		padding-top: 90px;
+		vertical-align: middle;
+
+		@media @tablet {
+			padding-top: 20px;
+		}
+
+		@media @mobile {
+			padding: 0 30px;
+		}
+	}
+}
+
+
+// -----------------------------
+// 	Main Sections
+// -----------------------------
+
+.main {
+	section {
+		padding: 85px 0;
+		@media @mobile {
+			padding: 50px 0;
+		}
+		&.technology, &.theme-showcase {
+			padding-bottom: 0;
+		}
+	}
+
+	// Sub Heading For Sections
+	h4 {
+		color: #8d9193;
+		padding-bottom: 40px;
+		@media @mobile {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+
+
+// 	Resources
+// ------------
+
+.resources {
+	border-top: 1px solid rgb(225,225,225);
+	ul {
+		margin: 0;
+		padding: 35px 0 0;
+	}
+
+	// Resources List
+	li {
+		display: inline-block;
+		list-style: none;
+		margin-bottom: 30px;
+		margin-right: 8%;
+		width: 45%;
+
+		@media @tablet {
+			margin-right: 6%;
+			width: 46%;
+		}
+
+		@media @mobile {
+			margin-right: 0;
+			text-align: center;
+			width: 100%;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+		&:nth-child(n+5):nth-child(-n+6) {
+			margin-bottom: 0;
+		}
+		.resources-icon, .widget.content {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.resources-icon {
+			margin-right: 7%;
+			max-width: 60px;
+
+			@media @mobile {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		.content {
+			width: 80%;
+
+			@media @tablet {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+// 	Theme Showcase
+// ----------------
+
+.theme-showcase {
+	background-color: @grey;
+	border-top: 1px solid darken(@grey, 5%);
+	border-bottom: 1px solid darken(@grey, 5%);
+	img {
+		border-top: 1px solid darken(@grey, 5%);
+		border-left: 1px solid darken(@grey, 5%);
+		border-right: 1px solid darken(@grey, 5%);
+
+		.box-shadow(0px, 0px, 8px, 0px, 0.025);
+
+		@media @mobile {
+			max-width: 150%;
+		}
+	}
+}
+
+
+// 	Features
+// ------------
+
+section.features {
+	padding: 100px 0 85px;
+
+	@media @mobile {
+		padding: 50px 0 40px;
+	}
+	.row .six:nth-child(2) {
+		margin-left: 5%;
+
+		@media @tablet {
+			margin-left: 0;
+		}
+	}
+	.six {
+		width: 45%;
+
+		@media @tablet {
+			margin: 0;
+			width: 100%;
+		}
+
+		&.features-illustrations {
+			width: 50%;
+
+			@media @tablet {
+				margin-bottom: 20px;
+				width: 100%;
+			}
+		}
+
+		@media @tablet {
+			+ .features-illustrations {
+				display: none;
+			}
+		}
+	}
+
+	@media @tablet {
+		.features-illustrations:nth(2) {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	h2 {
+		font-size: 38px;
+		font-size: 2.23529411765rem;
+		line-height: 42px;
+
+		@media @mobile {
+			font-size: 32px; 
+       		font-size: 1.88235294118rem; /* 32 / 17 */
+       		line-height: 36px;
+		}
+	}
+	.row:first-child {
+		margin-bottom: 80px;
+
+		@media @tablet {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.features-icon {
+	display: inline-block;
+	margin-right: 4%;
+	position: relative;
+	height: 215px;
+	width: 28%;
+
+	@media @tablet {
+		float: left;
+		height: auto;
+		margin-right: 0;
+		width: 32%;
+	}
+	@media @mobile {
+		margin-right: 4%;
+		width: 45%;
+	}
+
+	svg {
+		position: absolute;
+		right: 0;
+
+		@media @tablet {
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			vertical-align: middle;
+		}
+	}
+	&:first-child svg {
+		top: 0;
+
+		@media @mobile {
+			transform: scale(0.8);
+		}
+	}
+	&:nth-child(2) svg {
+		bottom: 0;
+
+		@media @mobile {
+			padding-top: 15px;
+			transform: scale(1);
+		}
+	}
+	&:nth-child(3) {
+		margin-right: 0;
+
+		@media @mobile {
+			display: none;
+			visibility: none;
+		}
+		svg {
+			top: 0;
+		}
+	}
+}
+
+
+// 	Sign Up
+// ----------
+
+.sign-up {
+	background: url("../images/backgrounds/signin-bg.jpg") @black no-repeat center;
+	padding: 65px 0 60px;
+	text-align: center;
+	h2 {
+		color: @white;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	a {
+		color: lighten(@dark-grey, 25%);
+		margin-left: 4px;
+		text-decoration: none;
+		&:hover {
+			color: @white;
+		}
+		&.button {
+			margin-bottom: 25px;
+			min-width: 250px;
+		}
+	}
+}
+
+
+
+// -----------------------------
+// 	Footer
+// -----------------------------
+
+.footer {
+	border-top: 1px solid darken(@grey, 5%);
+	@media only screen and (max-width: 860px) {
+		.four {
+			width: 30.6666666667%;
+		}
+		.eight {
+			margin-left: 4%;
+			width: 65.3333333333%;
+		}
+	}
+	@media @mobile {
+		.four, nav ul {
+			text-align: center!important;
+		}
+		.four {
+			width: 100%;
+		}
+		.eight {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+	h5 {
+		color: fade(@black, 80%);
+		line-height: 85px;
+
+		@media @mobile {
+			line-height: 30px;
+			padding: 25px 0 20px;
+		}
+	}
+	// Navigation
+	nav {
+		@media @mobile {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	nav ul {
+		margin: 0;
+		padding-left: 0;
+		text-align: right;
+	}
+	nav li {
+		display: inline-block;
+		&:last-child a {
+			padding-right: 0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	nav a {
+		color: fade(@black, 80%);
+		font-size: 14px;
+		font-weight: 500;
+		letter-spacing: 1px;
+		line-height: 85px;
+		padding-right: 15px;
+		text-decoration: none;
+		text-transform: uppercase;
+		&.active, &:hover, &:focus {
+			color: @black;
+		}
+		&:after {
+			content: "/";
+			padding-left: 15px;
+		}
+	}
+}
