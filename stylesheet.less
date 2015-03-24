@@ -29,7 +29,7 @@
 @import "@{templateLocal}/less/grid.less";				// Grid
 @import "@{templateLocal}/less/type.less";      		// Typography
 
-@import "@{templateLocal}/less/signup-login.less";      // Signup Overlay & form
+@import "@{templateLocal}/less/form-overlay.less";      // Signup Overlay & Form
 @import "@{templateLocal}/less/slider.less";      		// Slider Styles
 @import "@{templateLocal}/less/template-list.less";     // Template Picker List
 @import "@{templateLocal}/less/blog.less";				// Blog
@@ -39,6 +39,19 @@
 // -----------------------------
 // 	Global Styles
 // -----------------------------
+
+
+// 	Widget Positioning
+// ------------
+
+.widget {
+    position: relative;
+}
+
+// Main Zone
+.bk-zone {
+    min-height: 40px;
+}
 
 
 // 	Buttons
@@ -107,17 +120,16 @@
 	@media @tablet {
 		height: 0;
 		opacity: 0;
-		visability: hidden;
+		visibility: hidden;
 		transform-origin: 100% 0%;
 		-webkit-transform: scale(0) translateY(-150px);
 		-moz-transform: scale(0) translateY(-150px);
 		-o-transform: scale(0) translateY(-150px);
 		transform: scale(0) translateY(-150px);
-		.transition(all, .5s, ease);
 		&.active {
 			height: auto;
 			opacity: 1;
-			visability: visible;
+			visibility: visible;
 			-webkit-transform: scale(1) translateY(0px);
 			-moz-transform: scale(1) translateY(0px);
 			-o-transform: scale(1) translateY(0px);
@@ -131,6 +143,10 @@
 	margin: 0;
 	padding-left: 0;
 	text-align: right;
+
+	@media @tablet {
+		text-align: center;
+	}
 }
 
 .nav li {
@@ -171,7 +187,11 @@
 		line-height: 65px;
 		padding: 0;
 		&.button.outline {
-			border: none;
+			border-color: @white;
+			display: block;
+			line-height: 50px;
+			margin-bottom: 30px;
+			text-align: center;
 		}
 	}
 }
@@ -288,6 +308,10 @@
 	// Homepage Feature
 	&.home { 
 		background: image("/images/backgrounds/feature-bg.jpg") @black no-repeat center;
+	}
+
+	&.alt {
+		background: image("/images/backgrounds/feature-bg2.jpg") @black no-repeat center;
 	}
 
 	// Templates feature
@@ -409,7 +433,7 @@
 
 			@media @mobile {
 				display: block;
-				margin: 0 auto;
+				margin: 0 auto 10px;
 			}
 		}
 		.content {
@@ -472,7 +496,7 @@ section.features {
 			width: 50%;
 
 			@media @tablet {
-				margin-bottom: 25px;
+				margin-bottom: 40px;
 				width: 100%;
 			}
 		}
@@ -525,8 +549,8 @@ section.features {
 		width: 32%;
 	}
 	@media @mobile {
-		margin-right: 4%;
-		width: 45%;
+		margin-right: 0;
+		width: 100%;
 	}
 
 	svg {
