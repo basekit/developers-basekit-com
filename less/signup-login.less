@@ -7,6 +7,8 @@
 .dev-overlay {
 	display: block;
 	position: fixed;
+	height: 100%;
+	overflow-y: scroll;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -22,7 +24,7 @@
 		text-align: center;
 
 		@media @mobile {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		}
 	}
 	p {
@@ -31,7 +33,7 @@
 	.vertical-center {
 		@media @mobile {
 			display: block;
-			padding-top: 110px;
+			padding-top: 80px;
 		}
 	}
 	.icon-close, .container {
@@ -89,8 +91,9 @@
 	z-index: 9999;
 
 	@media @mobile {
+		font-size: 38px;
 		right: 6%;
-		top: 20px;
+		top: 10px;
 	}
 
 	&:after {
@@ -141,6 +144,55 @@
 
 		@media @mobile {
 			padding: 30px 30px 35px;
+		}
+	}
+
+	// Error Message
+	.alert {
+		.border-radius(6px);
+		color: #a94442;
+		background-color: #f2dede;
+		border: 1px solid transparent;
+		border-color: #ebccd1;
+		margin: 0 auto 20px;
+		max-width: 500px;
+		padding: 10px 15px;
+		position: relative;
+		text-align: center;
+		.transition(all, 0.5s, ease-in-out);
+		&:before {
+			border-radius: 50px;
+			color: #a94442;
+			content: "!";
+			display: inline-block;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+			position: relative;
+			height: 22px;
+			width: 22px;
+			border: 2px solid fade(#a94442, 65%);
+			position: absolute;
+			right: 15px;
+		}
+		&.hidden {
+			display: none!important;
+			visibility: hidden!important;
+		}
+	}
+	input.error {
+
+	}
+	label.error {
+		color: #d63b38;
+		display: block;
+		font-size: 16px;
+		margin-bottom: 16px;
+		margin-top: -8px;
+		text-align: center;
+		&:before {
+			content:"*";
+			margin-right: 5px;
 		}
 	}
 
@@ -226,7 +278,6 @@
 		height: 55px;
 		text-indent: 15px;
 		.transition(all, 0.5s, ease-out);
-		width: 100%;
 	}
 	button {
 		background-color: @green;
@@ -287,6 +338,7 @@
 		}
 	}
 	p {
+		font-size: 15px;
 		margin-top: 10px;
 		text-align: center;
 	}

@@ -17,8 +17,8 @@
 		<div class="container">
 			<div class="row">
 
-				<div id="form-error" class="" role="alert">
-					<p><strong>Oh dear!</strong> Does this account already exist?</p>
+				<div id="form-error" class="alert hidden" role="alert">
+					<strong>Oh dear!</strong> Does this account already exist?
 				</div>
 
 				<form role="form" id="register_form" action="http://basekit.dekk.io/register" method="POST">
@@ -42,7 +42,7 @@
 				</form>
 
 				<div class="terms text-center">
-					<p>By continuing, you're confirming to our <a href="http://www.basekit.com/terms-and-conditions">Terms and Conditions</a></p>
+					<p>By continuing you're agreeing to our <a href="http://www.basekit.com/terms-and-conditions">Terms and Conditions</a></p>
 				</div>
 
 			</div>
@@ -64,5 +64,8 @@
 
 	<!-- SIGN UP -->
 	<script src="{{asset('js/signup.js')}}"></script>
+
+	<!-- FORM VALIDATION -->
+	<script src="{{asset('js/jquery.validate.min.js')}}"></script>
 
 {% endblock %}

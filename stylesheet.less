@@ -214,10 +214,14 @@
 		background-color: transparent;
 		&:before {
 			top: 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
 			transform: rotate(45deg);
 		}
 		&:after {
 			bottom: 0;
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 		}
 	}
@@ -296,6 +300,11 @@
 
 	h1 {
 		color: @white;
+
+		@media @mobile {
+			font-size: 38px;
+			font-size: 2.23529411765rem
+		}
 	}
 	h4 {
 		color: fade(@white, 70%);
@@ -463,7 +472,7 @@ section.features {
 			width: 50%;
 
 			@media @tablet {
-				margin-bottom: 20px;
+				margin-bottom: 25px;
 				width: 100%;
 			}
 		}
@@ -542,8 +551,8 @@ section.features {
 		bottom: 0;
 
 		@media @mobile {
-			padding-top: 15px;
-			transform: scale(1);
+			display: none;
+			visibility: none;
 		}
 	}
 	&:nth-child(3) {

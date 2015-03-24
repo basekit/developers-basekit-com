@@ -29,6 +29,6 @@ document.querySelector(".nav-toggle").addEventListener("click", function() {
 });
 
 $('.nav-toggle').on('click', function(e) {
-    $('nav').toggleClass("active"); //you can list several class names 
+    $('nav').toggleClass("active");
     e.preventDefault();
 });
