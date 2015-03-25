@@ -187,7 +187,9 @@
 		line-height: 65px;
 		padding: 0;
 		&.button.outline {
-			border-color: @white;
+			background-color: @orange;
+			border: none;
+			color: @white;
 			display: block;
 			line-height: 50px;
 			margin-bottom: 30px;
@@ -273,7 +275,7 @@
 
 		@media @tablet {
 			background-color: @black;
-			position: relative;
+			.transition(background, .5s, ease-out);
 			.four, .eight {
 				margin: 0;
 				width: 100%;
@@ -324,6 +326,8 @@
 
 	h1 {
 		color: @white;
+		font-weight: 400;
+		letter-spacing: initial;
 
 		@media @mobile {
 			font-size: 38px;
@@ -356,7 +360,8 @@
 		}
 
 		@media @mobile {
-			padding: 0 30px;
+			padding: 40px 30px 0
+			;
 		}
 	}
 }
@@ -519,6 +524,9 @@ section.features {
 		font-size: 38px;
 		font-size: 2.23529411765rem;
 		line-height: 42px;
+
+		margin-bottom: 25px;
+		margin-bottom: 1.47058823529rem; /* 25 / 17 */
 
 		@media @mobile {
 			font-size: 32px; 
