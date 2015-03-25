@@ -30,7 +30,7 @@ $(document).ready(function(){
             },
 			password: {
       			required: "What's your password?",
-      			minlength: jQuery.format("At least 7 characters required")
+      			minlength: "At least 7 characters required"
     		}
         },
         highlight: function(element) {
