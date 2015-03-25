@@ -17,7 +17,9 @@
 
 //  5.   Footer
 
-
+#tdk-toolbar {
+	display: none;
+}
 
 // -----------------------------
 // 	LESS Includes
@@ -310,6 +312,10 @@
 	// Small Feature 
 	&.small {
 		height: 280px;
+		h1 {
+			font-size: 52px;
+			font-size: 3.05882352941rem;
+		}
 	}
 
 	// Homepage Feature
@@ -336,7 +342,7 @@
 
 		@media @mobile {
 			font-size: 38px;
-			font-size: 2.23529411765rem
+			font-size: 2.23529411765rem;
 		}
 	}
 	h4 {
@@ -354,6 +360,10 @@
 		height: 100%;
 		width: 100%;
 		z-index: 1;
+
+		@media @mobile {
+			top: 80px;
+		}
 	}
 	.container {
 		display: table-cell;
@@ -365,7 +375,7 @@
 		}
 
 		@media @mobile {
-			padding: 40px 30px 0
+			padding: 0 30px;
 			;
 		}
 	}

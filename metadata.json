@@ -1,5 +1,5 @@
 {
-    "name": "dev-site",
+    "name": "BaseKit Developer Portal",
     "thumbnail": "thumbnail.png",
     "pageTypes":["home", "templates", "signup", "blogpostlist", "blogpost", "faq"],
     "colorSwatches":

@@ -5,48 +5,13 @@
 
 // Full Screen Overlay
 .dev-overlay {
-	display: block;
-	position: fixed;
-	height: 100%;
-	overflow: scroll;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	top: 0;
-	pointer-events: none;
-	z-index: 999;
 	.transition(all, 0.35s, ease-in-out);
-	-webkit-overflow-scrolling: touch;
-	h2, h3 {
-		color: @white;
-	}
-	h2 {
-		margin-bottom: 65px;
-		text-align: center;
-
-		@media @mobile {
-			margin-bottom: 20px;
-		}
-	}
-	p {
-		//color: lighten(@dark-grey, 10%);
-	}
-	.vertical-center {
-		@media @mobile {
-			display: block;
-			padding-top: 80px;
-		}
-	}
+	position: relative;
+	height: 0;
+	visibility: hidden;
 	.icon-close, .container {
 		opacity: 0;
 		visiblity: hidden;
-	}
-	img {
-		opacity: 0.75;
-		width: 100%;
-	}
-	.widget.blogpost, .widget.blogpostlist {
-		display: none;
 	}
 }
 
@@ -70,14 +35,49 @@
 
 // Overlay Target
 .dev-overlay:target {
-	display: block;
+	background: @black;
+	height: 100%;
+	overflow: scroll;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	position: fixed;
 	pointer-events: auto;
-  	background: @black;
+	-webkit-overflow-scrolling: touch;
+	visibility: visible;
+  	z-index: 999;
 
 	.container, .icon-close {
 		.transition(all, 0.65s, ease-in-out);
 		opacity: 1;
 		visibility: visible;
+	}
+
+	h2, h3 {
+		color: @white;
+	}
+	h2 {
+		margin-bottom: 65px;
+		text-align: center;
+
+		@media @mobile {
+			margin-bottom: 20px;
+		}
+	}
+	.vertical-center {
+		@media @mobile {
+			display: block;
+			padding-top: 80px;
+		}
+	}
+	img {
+		opacity: 0.75;
+		width: 100%;
+	}
+	.widget.blogpost, .widget.blogpostlist {
+		display: none;
 	}
 }
 
@@ -191,10 +191,6 @@
 		margin-bottom: 16px;
 		margin-top: -8px;
 		text-align: center;
-		&:before {
-			content:"*";
-			margin-right: 5px;
-		}
 	}
 
 	input {
