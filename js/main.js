@@ -24,11 +24,7 @@ var themeswiper = new Swiper('.showcase-swiper', {
 
 
 // Mobile Navigation Toggle
-document.querySelector(".nav-toggle").addEventListener("click", function() {
-    this.classList.toggle("active");
-});
 
-$('.nav-toggle').on('click', function(e) {
-    $('nav').toggleClass("active");
-    e.preventDefault();
+$( ".nav-toggle").click(function() {
+    $( ".header, .nav-toggle, nav" ).toggleClass( "active" );
 });
