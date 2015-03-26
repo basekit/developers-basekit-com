@@ -5,7 +5,7 @@
 .blog-post-item {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 60px;
+	margin-bottom: 80px;
 
 	@media @mobile {
 		margin-bottom: 30px;
@@ -19,14 +19,19 @@
 .blog-post-feature-image-wrap, .blog-list-footer {
 	margin: 0 auto 30px;
 	max-width: 1000px;
+	text-align: center;
 	width: 100%;
+}
+
+.blog-list-footer {
+	margin-bottom: 60px;
 }
 
 .blog-post-feature-image-wrap {
 	background-position: center;
 	background-size: cover;
-	min-height: 450px;
-	max-height: 550px;
+	min-height: 400px;
+	max-height: 50px;
 
 	@media @mobile {
 		min-height: 250px;
@@ -41,12 +46,13 @@
 
 .blog-post-title, .blog-post-summary, .blog-post-content, .blog-post-more-link, .blog-post-date, .blog-post-metadata{
 	margin: 0 auto 20px;
-	max-width: 860px;
+	max-width: 800px;
 	text-align: left;
 	width: 100%;
 }
 
 .blog-post-title {
+	line-height: 1.18;
 	order: 2;
 	a {
 		text-decoration: none;
@@ -75,6 +81,27 @@
 	}
 }
 
+// Footer Older / Newer Pagination
+.blog-post-pagination-page {
+	border: 2px solid fade(@black, 20%);
+	.border-radius(4px);
+	color: fade(@black, 40%);
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 10px 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	.transition (all, .5s, ease-out);
+	&:hover {
+		border: 2px solid fade(@black, 40%);
+		color: fade(@black, 75%);
+	}
+	&:first-child {
+		margin-right: 20px;
+	}
+}
 
 section.blog-post-content {
 	padding: 0!important;
@@ -84,8 +111,8 @@ section.blog-post-content {
 	margin: 40px auto 0;
 
 	.blog-post-title {
-		font-size: 46px;
-   		font-size: 2.11764705882rem; /* 42 / 17 */
+		font-size: 42px;
+   		font-size: 2.47058823529rem; /* 42 / 17 */
 		line-height: 1.2;
 		margin: 12px auto 24px;
 
@@ -147,7 +174,6 @@ section.blog-post-content {
 	}
 
 	// Blog Post Date
-
 	.blog-post-publish-date {
 		color: @dark-grey;
 		float: left;
