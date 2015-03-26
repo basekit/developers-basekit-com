@@ -5,7 +5,7 @@
 
 // Full Screen Overlay
 .dev-overlay {
-	.transition(all, 0.35s, ease-in-out);
+	.transition(opacity, 0.35s, ease-in-out);
 	position: relative;
 	height: 0;
 	visibility: hidden;
@@ -17,7 +17,7 @@
 
 // Signup Flow Choices
 .signup-choice {
-	.transition(opacity, 0.5s, ease-out);
+	display: block;
 	text-decoration: none;
 	img {
 		opacity: 0.5;
@@ -71,10 +71,6 @@
 			display: block;
 			padding-top: 80px;
 		}
-	}
-	img {
-		opacity: 0.75;
-		width: 100%;
 	}
 	.widget.blogpost, .widget.blogpostlist {
 		display: none;
@@ -307,7 +303,7 @@
 	}
 	// Error Message
 	.error {
-		color: lighten(@dark-grey, 15%);
+		color: #f23333;
 		display: none;
 		font-size: 16px;
 		margin: 0 0 10px;
@@ -315,7 +311,6 @@
 		text-align: center;
 		&:before {
 			  border-radius: 50px;
-			  color: #ff1a1a;
 			  content: "!";
 			  display: inline-block;
 			  font-size: 16px;
