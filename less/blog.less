@@ -128,7 +128,7 @@ section.blog-post-content {
 }
 
 .blog-post-metadata {
-	margin: 25px auto 60px;
+	margin: 25px auto 40px;
 
 	@media @mobile {
 		margin: 10px auto 40px;
@@ -194,6 +194,34 @@ section.blog-post-content {
 
 }
 
+.blog-post-sharing {
+		margin: 10px auto;
+		max-width: 800px;
+		width: 100%;
+	button {
+		.border-radius(3px);
+		border: 0;
+		color: @white;
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		height: 30px;
+		margin-right: 4px;
+		line-height: 28px;
+		padding: 0 10px;
+
+		&.facebook {
+			background-color: #3b5998;
+		}
+		&.twitter {
+			background-color: #4099FF;
+		}
+		&.googleplus {
+			background-color: #D50F25;
+		}
+	}
+}
+
 
 // Typographic Heiriarchy
 // ----------------------
@@ -218,11 +246,13 @@ section.blog-post-content {
 	h3 {
 		font-size: 22px;
 		line-height: 28px;
-		padding: 15px 0;
+		padding: 0 0 15px;
 	}
 	h4 {
+		color: @black;
 		font-size: 18px;
-		margin-bottom: 15px;
+		font-weight: 500;
+		margin-bottom: 25px;
 	}
 	h5 {
 		font-size: 16px;
@@ -289,15 +319,9 @@ section.blog-post-content {
 // ----------------------
 
 .widget.disqus {
-	border: 1px solid 1px solid rgba(0,0,0,0.075);
-	padding: 50px 60px 30px;
-	max-width: 70%;
-	@media @tablet {
-		border: none;
-		padding: 20px 35px;
-		max-width: 100%;
-	}
+	margin: 30px auto 60px;
+	max-width: 800px;
 	@media @mobile {
-		padding: 20px 25px;
+		padding: 20px 35px;
 	}
 }
