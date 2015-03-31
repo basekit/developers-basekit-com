@@ -236,6 +236,15 @@
 // -----------------------------
 
 
+// Button Success Spinner
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+
 // Login Form
 .login-form {
 	.row {
@@ -286,6 +295,24 @@
 		padding: 16px 20px;
 		width: 100%;
 		text-transform: uppercase;
+	}
+	button[disabled] {
+		cursor: not-allowed;
+		pointer-events: none;
+		opacity: .5;
+		filter: alpha(opacity=50);
+		&:after {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border: 6px solid rgba(255,255,255,.3);
+			border-radius: 50%;
+			border-top-color: #fff;
+			animation: spin 1s ease-in-out infinite;
+			-webkit-animation: spin 1s ease-in-out infinite;
+			text-align: right;
+		}
 	}
 	.password-mask-toggle {
 		background-color: rgba(0,0,0, 0.2);

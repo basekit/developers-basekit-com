@@ -5,7 +5,23 @@
 
 <!-- HEADER & NAVIGATION -->
 
-{% include 'includes/header.twig' %}
+{% include 'includes/header-small.twig' %}
+
+<!-- Feature -->
+	<div class="feature small blog-img">
+	    <div class="feature-content">
+	        <div class="container">
+	        	{{widget('content', 'feature-heading', {"content":'<h1>Blog</h1><h4>For all your latest BaseKit and developer news</h4>'})|raw}}
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+
+<!-- SIGNUP / LOGIN OVERLAY -->
+
+{% include 'includes/form-overlay.twig' %}
 
 
 

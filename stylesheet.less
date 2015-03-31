@@ -316,15 +316,24 @@
 			font-size: 52px;
 			font-size: 3.05882352941rem;
 		}
+		h4 {
+
+		}
 	}
 
-	// Homepage Feature
-	&.home { 
+	// Homepage Feature Image
+	&.home-img { 
 		background: image("/images/backgrounds/feature-bg.jpg") @black no-repeat center;
 	}
 
-	&.alt {
+	// Alternate Feature Image
+	&.alt-img {
 		background: image("/images/backgrounds/feature-bg2.jpg") @black no-repeat center;
+	}
+
+	// Blog Feature Image
+	&.blog-img {
+		background: image("/images/backgrounds/blog-bg.jpg") @black no-repeat center;
 	}
 
 	// Templates feature
@@ -462,6 +471,11 @@
 			@media @tablet {
 				width: 100%;
 			}
+		}
+		a {
+		  color: transparent;
+		  display: block;
+		  text-decoration: none;
 		}
 	}
 }
@@ -746,7 +760,7 @@ section.features {
 .faq-questions {
 	border-right: 1px solid rgba(0,0,0,0.075);
 	padding: 0 10% 20px 0;
-	width: 73%;
+	width: 70%;
 	@media @mobile {
 		border-right: none;
 		padding: 0;
@@ -817,7 +831,7 @@ section.features {
 	position: absolute;
 	top: 40px;
 	vertical-align: top;
-	width: 25%;
+	max-width: 20%;
 	@media @mobile {
 		display: none;
 	}

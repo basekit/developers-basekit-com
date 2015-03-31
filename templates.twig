@@ -3,51 +3,18 @@
 {% block content %}
 
 
-<!-- HEADER - NAV SMALL -->
+<!-- HEADER & NAVIGATION -->
 
-<div class="header-feature">
+{% include 'includes/header-small.twig' %}
 
-	<header class="header" role="banner">
-	    <div class="container">
-	    	<div class="row">
-
-	    	<!-- Logo -->
-		        <div class="four columns">
-	                <a href="/home" class="logo">
-	                	<img src="{{asset('images/basekit-logo.svg')}}" alt="BaseKit">
-	                </a>
-		        </div>
-
-		        <!-- Mobile Navigation Toggle -->
-		        <div class="nav-toggle toggle"><span></span></div>
-
-		        <!-- Navigation -->
-		        <div class="eight columns">
-		        	<nav class="nav">
-			            <ul>
-			                <li><a target="_blank" href="http://docs.basekit.com/">Docs</a></li>
-							<li><a href="/blog">Blog</a></li>
-							<li><a target="_blank" href="http://knowledge.basekit.com/">Knowledge</a></li>
-							<li><a href="/faq">FAQ</a></li>
-							<li><a href="#login" class="button small outline">Login</a></li>
-			            </ul>
-		            </nav>
-
-		        </div>
-
-		    </div>
-	    </div>
-	</header>
-
-	<!-- Feature -->
-	<div class="feature small alt">
+<!-- Feature -->
+	<div class="feature small alt-img">
 	    <div class="feature-content">
 	        <div class="container">
-	        	{{widget('content', 'feature-heading-templates', {"content":'<h1>Select your template</h1><h4>Tour through our template library, select the one you love and get building. Have the freedom to switch templates at any time.</h4>'})|raw}}
+	        	{{widget('content', 'feature-heading-templates', {"content":'<h1>Select your template</h1><h4>Tour through our template library, select the one you love and get building. Have the freedom to switch templates at any time.</h4>'})|raw}}edom to switch templates at any time.</h4>'})|raw}}
 	        </div>
 	    </div>
 	</div>
-
 </div>
 
 

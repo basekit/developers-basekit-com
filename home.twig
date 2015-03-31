@@ -42,17 +42,21 @@
 
 			<div class="row">
 				<ul>
+
 					<li>
-						<div class="resources-icon">
-							<svg width="62px" height="50px">
-							    <switch>
-							        <use xlink:href="#documentation"></use>
-							    </switch>
-							</svg>
-						</div>
-												
-						{{widget('content', 'resources-heading-2', {"content":'<h3>Documentation</h3><p>Stuck at step one? Hit a wall while building? We’ve got documentation for that. Read our growing collection of guides and problem solvers here.</p>'})|raw}}
+						<a href="//docs.basekit.com">
+							<div class="resources-icon">
+								<svg width="62px" height="50px">
+								    <switch>
+								        <use xlink:href="#documentation"></use>
+								    </switch>
+								</svg>
+							</div>
+													
+							{{widget('content', 'resources-heading-2', {"content":'<h3>Documentation</h3><p>Stuck at step one? Hit a wall while building? We’ve got documentation for that. Read our growing collection of guides and problem solvers here.</p>'})|raw}}
+						</a>
 					</li>
+
 					<li>
 						<div class="resources-icon">
 							<svg width="62px" height="70px">
@@ -64,20 +68,23 @@
 						
 						{{widget('content', 'resources-heading-3', {"content":'<h3>Reduce development time</h3><p>Our large selection of templates will mean you can get building with speed, or simply start from scratch with our Baseplate.</p>'})|raw}}
 					</li>
+
 					<li>
-						<div class="resources-icon">
-							<svg width="62px" height="50px">
-							    <switch>
-							        <use xlink:href="#knowledge"></use>
-							    </switch>
-							</svg>
-						</div>
-						
-						{{widget('content', 'resources-heading-4', {"content":'<h3>Knowledge</h3><p>Question the team thats builds with BaseKit everyday. Our experts are here to support you.</p>'})|raw}}
+						<a href="//knowledge.basekit.com">
+							<div class="resources-icon">
+								<svg width="62px" height="50px">
+								    <switch>
+								        <use xlink:href="#knowledge"></use>
+								    </switch>
+								</svg>
+							</div>
+							
+							{{widget('content', 'resources-heading-4', {"content":'<h3>Knowledge</h3><p>Question the team thats builds with BaseKit everyday. Our experts are here to support you.</p>'})|raw}}
+						</a>
 					</li>
 					<li>
 						<div class="resources-icon">
-							<svg width="60px" height="50px">
+							<svg width="60px" height="60px">
 							    <switch>
 							        <use xlink:href="#control"></use>
 							    </switch>
@@ -87,15 +94,16 @@
 						{{widget('content', 'resources-heading-5', {"content":'<h3>Flexbility and ultimate control</h3><p>The power is in your hands to give your clients as much, or as little, editing control as you like. Design your way.</p>'})|raw}}
 					</li>
 					<li>
-						<div class="resources-icon">
-							<svg width="62px" height="60px">
-							    <switch>
-							        <use xlink:href="#faq"></use>
-							    </switch>
-							</svg>
-						</div>
-						
-						{{widget('content', 'resources-heading-6', {"content":'<h3>FAQs</h3><p>We promise this page won’t collect virtual dust! It’s regularly updated with your latest questions.</p>'})|raw}}
+						<a href="/faq">
+							<div class="resources-icon">
+								<svg width="62px" height="60px">
+								    <switch>
+								        <use xlink:href="#faq"></use>
+								    </switch>
+								</svg>
+							</div>
+							{{widget('content', 'resources-heading-6', {"content":'<h3>FAQs</h3><p>We promise this page won’t collect virtual dust! It’s regularly updated with your latest questions.</p>'})|raw}}
+						</a>
 					</li>
 					<li>
 						<div class="resources-icon">
@@ -223,7 +231,7 @@
 		<div class="row">
 			<div class="twelve columns text-center">
 				{{widget('content', 'signin-heading', {"content":'<h2>Get Started</h2>'})|raw}}
-				{{widget('content', 'signin-button', {"content":'<a href="#signup" class="button large green">Sign Up</a><p>Already have an account? <a href="#">Sign in here</a></p>'})|raw}}
+				{{widget('content', 'signin-button', {"content":'<a href="#signup" class="button large green">Sign Up</a><p>Already have an account? <a href="#login">Sign in here</a></p>'})|raw}}
 			</div>
 		</div>
 
