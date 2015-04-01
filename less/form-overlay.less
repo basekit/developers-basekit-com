@@ -230,21 +230,23 @@
 }
 
 
+// Button
 
-// -----------------------------
-// 	Login Form
-// -----------------------------
-
+button#register-button {
+	.transition(0.25s, background-color, ease-out);
+}
 
 button[disabled=disabled][type=submit] {
+	color: @green;
 	cursor: not-allowed;
 	pointer-events: none;
 	position: relative;
 	opacity: .65;
-	filter: alpha(opacity=50);
+	filter: alpha(opacity=65);
+	text-shadow: none;
+	.transition(0.5s, background-color, ease-in);
 	&:before {
 		content: "";
-		background-color: @green;
 		width: 200px;
 		height: 30px;
 		display: block;
@@ -255,27 +257,34 @@ button[disabled=disabled][type=submit] {
 		opacity: 1;
 	}
 	&:after {
-			content: "";
-			display: inline-block;
-			width: 18px;
-			height: 18px;
-			border: 6px solid darken(@green, 15%);
-			border-radius: 50%;
-			border-top-color: lighten(@green, 30%);
-			animation: spin 1s ease-in-out infinite;
-			-webkit-animation: spin 1s ease-in-out infinite;
-			margin: 0 auto;
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 13px;
+		content: "";
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		border: 6px solid darken(@green, 15%);
+		border-radius: 50%;
+		border-top-color: lighten(@green, 30%);
+		animation: spin 1s ease-in-out infinite;
+		-webkit-animation: spin 1s ease-in-out infinite;
+		margin: 0 auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 13px;
 	}
 }
+
+
+
+// -----------------------------
+// 	Login Form
+// -----------------------------
 
 // Button Success Spinner
 @keyframes spin {
   to { -webkit-transform: rotate(360deg); }
 }
+
 @-webkit-keyframes spin {
   to { -webkit-transform: rotate(360deg); }
 }
