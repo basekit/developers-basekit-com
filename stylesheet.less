@@ -33,8 +33,6 @@
 @import "@{templateLocal}/less/template-list.less";     				// Template Picker List
 @import "@{templateLocal}/less/blog.less";								// Blog
 
-@import "@{templateLocal}/fonts/font-awesome/css/font-awesome.less";	// Font-awesome
-
 
 
 // -----------------------------
@@ -391,26 +389,18 @@
 
 	// Follow us link
 	.follow-us-header {
-		width: 192px;
-		margin: 0 auto;
-
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		right: 0;
 
-		// 	Font Awesome Icon
-		.fa-twitter {
-			color: fade(@white, 70%);
-			float: left;
-			margin-top: 6px;
-			.transition(color, 0.5s, ease-in-out);
-		}
-
-		&:hover {
-			.fa-twitter {
-			color: fade(@white, 90%);
-			}
+		// 	Twitter Icon
+		h4:before {
+			background-image: image("/images/twitter-icn.svg");
+			background-repeat: no-repeat;
+			background-size: 19px;
+			content: "";
+			padding: 0px 12px;
 		}
 
 		h4 {
@@ -719,32 +709,28 @@ section.features {
 .follow-us {
 	border-top: 1px solid darken(@grey, 5%);
 	padding-top: 27px;
-	.transition (@prop: all, @time: 0.5s, @ease: ease-in-out);
+	.transition (@prop: all, @time: 0.2s, @ease: ease-in-out);
 
-	.container {
-		width: 253px;
-
-		@media @mobile {
-			width: 200px;
-		}
+	// 	Twitter Icon
+	p:before {
+		background-image: image("/images/twitter-icn.svg");
+		background-repeat: no-repeat;
+		background-size: 19px;
+		content: "";
+		padding: 0px 12px;
 	}
 
-	p {
-		float: right;
+	svg {
+		margin-right: 4px;
+		vertical-align: middle;
 	}
 
-	// 	Font Awesome Icon
-	.fa-twitter {
-		color: @dark-grey;
-		float: left;
-		margin-top: 6px;
-		.transition(color, 0.5s, ease-in-out);
-	}
+
 
 	// Equalises transitions
 	p,
 	span {
-		.transition(color, 0.5s, ease-in-out);
+		.transition(color, 0.2s, ease-in-out);
 	}
 
 	// Sets basekit text to blue
@@ -755,9 +741,12 @@ section.features {
 	&:hover {
 		background-color: #139bd5;
 		p,
-		span,
-		.fa-twitter {
+		span {
 			color: @white;
+		}
+
+		p:before {
+			background-image: image("/images/twitter-icn-hover.svg");
 		}
 	}
 }
