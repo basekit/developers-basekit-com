@@ -5,7 +5,7 @@
 //  1.   Includes
 
 //	2.	 Global Styles
-//	2.1  -  Buttons 
+//	2.1  -  Buttons
 
 //  3.   Header / Feature
 
@@ -21,7 +21,7 @@
 // -----------------------------
 // 	LESS Includes
 // -----------------------------
-	
+
 @import "@{templateLocal}/less/normalize.less";     	// Normalize
 
 @import "@{templateLocal}/less/mixins.less";       		// Mixins
@@ -306,7 +306,7 @@
 		}
 	}
 
-	// Small Feature 
+	// Small Feature
 	&.small {
 		height: 280px;
 		h1 {
@@ -319,7 +319,7 @@
 	}
 
 	// Homepage Feature Image
-	&.home-img { 
+	&.home-img {
 		background: image("/images/backgrounds/feature-bg.jpg") @black no-repeat center;
 	}
 
@@ -383,6 +383,48 @@
 		@media @mobile {
 			padding: 0 30px;
 			;
+		}
+	}
+
+	// Follow us link
+	.follow-us-content-header {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		// Hide at tablet
+		@media only screen and (max-width: 650px) {
+			display: none;
+		}
+
+		h4 {
+			color: fade(@white, 70%);
+			margin-bottom: 10px;
+			font-size: 16px;
+			.transition(color, 0.5s, ease-in-out);
+
+			&:hover {
+				color: fade(@white, 90%);
+			}
+		}
+
+		// Twitter logo
+		h4:before {
+		content: "\f099";
+		font-family: fontawesome;
+		font-size: 23px;
+		margin-right: 4px;
+		vertical-align: middle;
+		-webkit-font-smoothing: antialiased;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		span {
+			color: fade(@white, 90%);
 		}
 	}
 }
@@ -555,7 +597,7 @@ section.features {
 		margin-bottom: 1.47058823529rem; /* 25 / 17 */
 
 		@media @mobile {
-			font-size: 32px; 
+			font-size: 32px;
        		font-size: 1.88235294118rem; /* 32 / 17 */
        		line-height: 36px;
 		}
@@ -666,6 +708,45 @@ section.features {
 }
 
 
+// 	Follow Us
+// ----------
+
+.follow-us {
+	border-top: 1px solid darken(@grey, 5%);
+	padding-top: 27px;
+	.transition (@prop: all, @time: 0.5s, @ease: ease-in-out);
+
+	// Twitter logo
+	p:before {
+		content: "\f099";
+		font-family: fontawesome;
+		font-size: 24px;
+		margin-right: 8px;
+		vertical-align: middle;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	// Equalises transitions
+	p,
+	span {
+		.transition(color, 0.5s, ease-in-out);
+	}
+
+	// Sets basekit text to blue
+	span {
+		color: #139bd5;
+	}
+
+	&:hover {
+		background-color: #139bd5;
+		p,
+		span {
+			color: @white;
+		}
+	}
+}
+
+
 
 // -----------------------------
 // 	Footer
@@ -749,7 +830,7 @@ section.features {
 	padding-top: 65px;
 }
 
-.faq-questions, 
+.faq-questions,
 .faq-subnav {
 	display: inline-block;
 }
