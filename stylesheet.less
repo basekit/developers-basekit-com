@@ -367,9 +367,10 @@
 		width: 100%;
 		z-index: 1;
 
-		@media @mobile {
-			top: 80px;
-		}
+		// Removed to include room for Follow us link
+		// @media @mobile {
+		// 	top: 80px;
+		// }
 	}
 	.container {
 		display: table-cell;
@@ -392,11 +393,6 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-
-		// Hide at tablet
-		@media only screen and (max-width: 650px) {
-			display: none;
-		}
 
 		h4 {
 			color: fade(@white, 70%);
