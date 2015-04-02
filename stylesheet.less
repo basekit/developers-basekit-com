@@ -22,16 +22,18 @@
 // 	LESS Includes
 // -----------------------------
 
-@import "@{templateLocal}/less/normalize.less";     	// Normalize
+@import "@{templateLocal}/less/normalize.less";     					// Normalize
 
-@import "@{templateLocal}/less/mixins.less";       		// Mixins
-@import "@{templateLocal}/less/grid.less";				// Grid
-@import "@{templateLocal}/less/type.less";      		// Typography
+@import "@{templateLocal}/less/mixins.less";       						// Mixins
+@import "@{templateLocal}/less/grid.less";								// Grid
+@import "@{templateLocal}/less/type.less";      						// Typography
 
-@import "@{templateLocal}/less/form-overlay.less";      // Signup Overlay & Form
-@import "@{templateLocal}/less/slider.less";      		// Slider Styles
-@import "@{templateLocal}/less/template-list.less";     // Template Picker List
-@import "@{templateLocal}/less/blog.less";				// Blog
+@import "@{templateLocal}/less/form-overlay.less";      				// Signup Overlay & Form
+@import "@{templateLocal}/less/slider.less";      						// Slider Styles
+@import "@{templateLocal}/less/template-list.less";     				// Template Picker List
+@import "@{templateLocal}/less/blog.less";								// Blog
+
+@import "@{templateLocal}/fonts/font-awesome/css/font-awesome.less";	// Font-awesome
 
 
 
@@ -41,7 +43,7 @@
 
 
 // 	Widget Positioning
-// ------------
+// -------------------
 
 .widget {
     position: relative;
@@ -389,10 +391,27 @@
 
 	// Follow us link
 	.follow-us-content-header {
+		width: 192px;
+		margin: 0 auto;
+
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		right: 0;
+
+		// 	Font Awesome Icon
+		.fa-twitter {
+			color: fade(@white, 70%);
+			float: left;
+			margin-top: 6px;
+			.transition(color, 0.5s, ease-in-out);
+		}
+
+		&:hover {
+			.fa-twitter {
+			color: fade(@white, 90%);
+			}
+		}
 
 		h4 {
 			color: fade(@white, 70%);
@@ -403,16 +422,6 @@
 			&:hover {
 				color: fade(@white, 90%);
 			}
-		}
-
-		// Twitter logo
-		h4:before {
-		content: "\f099";
-		font-family: fontawesome;
-		font-size: 23px;
-		margin-right: 4px;
-		vertical-align: middle;
-		-webkit-font-smoothing: antialiased;
 		}
 
 		a {
@@ -712,14 +721,24 @@ section.features {
 	padding-top: 27px;
 	.transition (@prop: all, @time: 0.5s, @ease: ease-in-out);
 
-	// Twitter logo
-	p:before {
-		content: "\f099";
-		font-family: fontawesome;
-		font-size: 24px;
-		margin-right: 8px;
-		vertical-align: middle;
-		-webkit-font-smoothing: antialiased;
+	.container {
+		width: 253px;
+
+		@media @mobile {
+			width: 200px;
+		}
+	}
+
+	p {
+		float: right;
+	}
+
+	// 	Font Awesome Icon
+	.fa-twitter {
+		color: @dark-grey;
+		float: left;
+		margin-top: 6px;
+		.transition(color, 0.5s, ease-in-out);
 	}
 
 	// Equalises transitions
@@ -736,7 +755,8 @@ section.features {
 	&:hover {
 		background-color: #139bd5;
 		p,
-		span {
+		span,
+		.fa-twitter {
 			color: @white;
 		}
 	}
