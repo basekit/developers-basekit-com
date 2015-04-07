@@ -292,29 +292,29 @@
 // Feature
 .feature {
 	background-color: @black;
-	padding-top: 100px;
-	position: relative;
-	overflow: hidden;
 	text-align: center;
 
 	// Large Feature
-	&.large {
-		height: 600px;
+	&.large .feature-content {
+		height: 500px;
 
 		@media @mobile {
-			height: 380px;
+			height: 350px;
+			padding: 50px 0 20px;
 		}
 	}
 
 	// Small Feature
-	&.small {
-		height: 280px;
-		h1 {
-			font-size: 52px;
-			font-size: 3.05882352941rem;
-		}
-		h4 {
+	&.small .feature-content {
+		height: 250px;
 
+		@media @mobile {
+			height: 300px;
+			padding: 50px 0 20px;
+
+			h4 {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -353,46 +353,48 @@
 	}
 	h4 {
 		color: fade(@white, 70%);
-		margin-bottom: 40px;
+		margin-bottom: 25px;
+
+		@media @mobile {
+			font-size: 16px;
+			font-size: 0.94117647058rem;
+		}
 	}
 
 	// Div For Vertical Alignment
 	.feature-content {
-		display: table;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		padding: 80px 0 20px;		
 		z-index: 1;
-
-		// Removed to include room for Follow us link
-		// @media @mobile {
-		// 	top: 80px;
-		// }
 	}
+
 	.container {
-		display: table-cell;
-		padding-top: 90px;
-		vertical-align: middle;
-
-		@media @tablet {
-			padding-top: 20px;
-		}
-
-		@media @mobile {
-			padding: 0 30px;
-			;
-		}
+		position: initial;
 	}
 
 	// Follow us link
 	.follow-us-header {
 		position: absolute;
-		bottom: 0;
+		bottom: 10px;
 		left: 0;
 		right: 0;
+
+		@media @mobile {
+			display: none;
+			height: 0;
+			visibility: hidden;
+		}
 
 		// 	Twitter Icon
 		h4:before {
@@ -404,7 +406,7 @@
 		}
 
 		h4 {
-			color: fade(@white, 70%);
+			color: fade(@white, 65%);
 			margin-bottom: 10px;
 			font-size: 16px;
 			.transition(color, 0.5s, ease-in-out);
@@ -420,6 +422,7 @@
 
 		span {
 			color: fade(@white, 90%);
+			margin-left: 2px;
 		}
 	}
 }
@@ -834,6 +837,10 @@ section.features {
 
 .faq {
 	padding-top: 65px;
+
+	@media @mobile {
+		padding-top: 35px;
+	}
 }
 
 .faq-questions,

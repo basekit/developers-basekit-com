@@ -230,7 +230,7 @@
 			<div class="row">
 
 				<div class="twelve columns text-center">
-						{{widget('content', 'follow-us-content', {content: '<p>Follow us <span>@basekitdevs</span></p>'})|raw}}
+						{{widget('content', 'follow-us-content', {content: '<p>Follow us <span>@BaseKitDevs</span></p>'})|raw}}
 				</div>
 
 			</div>
@@ -267,5 +267,29 @@
 
 	<!-- SLIDER JS -->
 	<script src="{{asset('js/swiper.min.js')}}"></script>
+
+	<script>
+
+		// Initialize Tech Tab Slider
+		var techswiper = new Swiper('.tech-swiper', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			spaceBetween: 30,
+			autoplay: 5000,
+			autoplayDisableOnInteraction: true,
+			effect: 'fade',
+			 paginationBulletRender: function (index, className) {
+			    return '<span class="' + className + '">' + '<i class="arrow"></i>' + '</span>';
+			}
+		});
+
+
+		// Initialize Theme Slider
+		var themeswiper = new Swiper('.showcase-swiper', {
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			effect: 'fade'
+		});
+	</script>
 
 {% endblock %}
