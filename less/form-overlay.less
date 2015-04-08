@@ -94,9 +94,10 @@
 	}
 
 	&:after {
-		content: "X";
-		font-size: 46px;
+		content: "\00D7";
+		font-size: 72px;
 		font-weight: 200;
+		line-height: 72px;
 
 		@media @mobile {
 			font-size: 32px;
@@ -354,6 +355,17 @@ button[disabled=disabled][type=submit] {
 		height: 25px;
 		padding: 0;
 		z-index: 9999;
+	}
+	// Stay Logged In
+	.js-persist-login {
+		display: inline-block!important;
+		width: auto!important;
+		height: auto!important;
+		margin-right: 6px;
+		&+ label {
+			display: inline-block;
+			width: auto;
+		}
 	}
 	// Error Message
 	.error {
