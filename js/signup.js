@@ -58,7 +58,8 @@ $(document).ready(function(){
                 data: {
                     themeRef: $('#themeRef').val(),
                     email: $('#email').val(),
-                    password: $('#password').val()
+                    password: $('#password').val(),
+                    newsletter: $('#newsletter').val()
                 }
             }).done(function (response, status, jqXHR) {
 
