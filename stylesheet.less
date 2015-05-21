@@ -29,6 +29,7 @@
 @import "@{templateLocal}/less/type.less";      						// Typography
 
 @import "@{templateLocal}/less/form-overlay.less";      				// Signup Overlay & Form
+@import "@{templateLocal}/less/vimeo.less";      						// Vimeo Lightbox
 @import "@{templateLocal}/less/slider.less";      						// Slider Styles
 @import "@{templateLocal}/less/template-list.less";     				// Template Picker List
 @import "@{templateLocal}/less/blog.less";								// Blog
@@ -299,8 +300,8 @@
 		height: 500px;
 
 		@media @mobile {
-			height: 350px;
-			padding: 50px 0 20px;
+			height: 400px;
+			padding: 60px 0 20px;
 		}
 	}
 
@@ -427,6 +428,44 @@
 	}
 }
 
+
+.feature-buttons {
+	.widget {
+		display: inline-block;
+
+		@media @mobile {
+			display: block;
+		}
+	}
+	.button {
+		@media @mobile {
+			display: block;
+			margin: 0 auto 15px;
+			max-width: 75%;
+		}
+	}
+	.green {
+		min-width: 125px;
+	}
+}
+
+.vimeo-launch {
+	border: 2px solid fade(@white, 25%);
+	color: @white;
+	margin-left: 20px;
+	padding: 17px 25px 17px 22px!important;
+	.transition(all, .5s, ease-in-out);
+
+	&:before {
+		content: "\25BA";
+		margin-right: 10px;
+	}
+
+	&:hover {
+		background-color: white;
+		color: @black;
+	}
+}
 
 // -----------------------------
 // 	Main Sections
