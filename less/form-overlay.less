@@ -394,7 +394,7 @@ button[disabled=disabled][type=submit] {
 		}
 	}
 	// Error Message
-	.error {
+	.error, .message-text {
 		color: #f23333;
 		display: none;
 		font-size: 16px;
@@ -402,20 +402,20 @@ button[disabled=disabled][type=submit] {
 		position: relative;
 		text-align: center;
 		&:before {
-			  border-radius: 50px;
-			  content: "!";
-			  display: inline-block;
-			  font-size: 16px;
-			  font-weight: 400;
-			  line-height: 22px;
-			  position: relative;
-			  height: 22px;
-			  width: 22px;
-			  background-color: #f23333;
-			  color: @white;
-			  position: absolute;
-			  right: 15px;
-			  top: -60px;
+			border-radius: 50px;
+			content: "!";
+			display: inline-block;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+			position: relative;
+			height: 22px;
+			width: 22px;
+			background-color: #f23333;
+			color: @white;
+			position: absolute;
+			right: 15px;
+			top: -60px;
 		}
 		&.submission {
 			margin: 8px 0 0;
@@ -428,5 +428,38 @@ button[disabled=disabled][type=submit] {
 	}
 	a {
 		color: lighten(@dark-grey, 15%);
+	}
+}
+
+// Forgotton Password Error Message
+.message-box {
+	display: block;
+	margin: 0 auto;
+	max-width: 600px;
+	position: relative;
+}
+
+.message-text {
+	color: #f23333;
+	display: block;
+	font-size: 16px;
+	margin: 0 0 10px;
+	position: relative;
+	text-align: center;
+	&:before {
+		border-radius: 50px;
+		content: "!";
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		position: relative;
+		height: 22px;
+		width: 22px;
+		background-color: #f23333;
+		color: @white;
+		position: absolute;
+		right: 5px;
+		top: -152px;
 	}
 }
