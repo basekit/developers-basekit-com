@@ -9,12 +9,55 @@
 
 
 
+<!-- SIGNUP / LOGIN OVERLAY -->
+
+{% include 'includes/form-overlay.twig' %}
+
+
+
 <!-- MAIN SECTION -->
 
-<div role="main" class="main">
+<div role="main" class="main blog">
 	<div class="container">
-		{{widget('blogpost', 'singleblogpost', {})|raw}}
-		{{widget('disqus', 'pagecomments', {})|raw}}
+
+		<div class="row">
+			<div class="twelve columns">
+				<ul class="blog-breadcrumb">
+                    <li><a href="/blog">Basekit Developers Blog</a></li>
+                    <li><a href="{{plugins.blog.pathFormat}}{{plugins.blog.posts[0].slug}}" class="selected">
+                        {{ plugins.blog.posts[0].title|raw }}</a></li>
+                </ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="blog-main eight columns">
+				{{widget('blogpost', 'singleblogpost', {})|raw}}
+				{{widget('disqus', 'pagecomments', {})|raw}}
+			</div>
+
+			<div class="blog-sidebar four columns">
+				{{widget('blogsearch', 'blogsearch', {})|raw}}
+
+				<div class="blog-signup">
+					<h3>Sign up for free</h3>
+					<p>Lorum ipsum dolor amet f3lnf 3fl 3l f3lf 3lf 3l f3lnf l3 fl3 f3</p>
+					<a href="#" class="button green">Get started</a>
+				</div>
+
+				<div class="blog-useful-links">
+				<h3>Useful links</h3>
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		</div>
 	</div>
 </div>
 

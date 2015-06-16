@@ -99,7 +99,7 @@
 	top: 50%;
 	width: 25px;
 	height: 45px;
-	line-height: 48px;
+	line-height: 42px;
 	padding: 0 10px;
 	z-index: 10;
 	cursor: pointer;
@@ -114,9 +114,13 @@
 	@media @mobile {
 		background-color: @grey;
 		border: 0;
-		opacity: 0.5;
+		border-top: 1px solid #EAE8E8;
+		border-bottom: 1px solid #EAE8E8;
+		opacity: 1;
+		line-height: 54px;
 		height: 60px;
 		width: 30px;
+		top: 46%;
 	}
 	&:before {
 		color: fade(@black, 45%);
@@ -134,6 +138,10 @@
 
 .swiper-button-prev {
 	left: 0;
+	@media @mobile {
+		border-right: 1px solid #EAE8E8;
+	}
+
 	&:before {
 		content:"<";
 	}
@@ -143,6 +151,10 @@
 
 .swiper-button-next {
 	right: 0;
+	@media @mobile {
+		border-left: 1px solid #EAE8E8;
+	}
+
 	&:before {
 		content:">";
 	}

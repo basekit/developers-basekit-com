@@ -66,6 +66,8 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	.transition (all, .5s, ease-in);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 
 	// Small button
 	&.small {
@@ -179,6 +181,7 @@
 	padding: 0 20px;
 	text-decoration: none;
 	text-transform: uppercase;
+
 	&.active, &:hover, &:focus {
 		color: @white;
 	}
@@ -297,11 +300,11 @@
 
 	// Large Feature
 	&.large .feature-content {
-		height: 500px;
+		height: 550px;
 
 		@media @mobile {
 			height: 400px;
-			padding: 60px 0 20px;
+			padding: 70px 0 20px;
 		}
 	}
 
@@ -344,7 +347,7 @@
 
 	h1 {
 		color: @white;
-		font-weight: 400;
+		font-weight: 600;
 		letter-spacing: initial;
 
 		@media @mobile {
@@ -354,6 +357,7 @@
 	}
 	h4 {
 		color: fade(@white, 70%);
+		font-weight: 500;
 		margin-bottom: 25px;
 
 		@media @mobile {
@@ -458,6 +462,7 @@
 
 	&:before {
 		content: "\25BA";
+		font-family: Font Awesome;
 		margin-right: 10px;
 	}
 
@@ -473,7 +478,7 @@
 
 .main {
 	section {
-		padding: 85px 0;
+		padding: 75px 0;
 		@media @mobile {
 			padding: 50px 0;
 		}
@@ -528,11 +533,12 @@
 		&:nth-child(n+5):nth-child(-n+6) {
 			margin-bottom: 0;
 		}
-		.resources-icon, .widget.content {
+		.resources-icon, div[data-widget-type="content"] {
 			display: inline-block;
 			vertical-align: top;
 		}
 		.resources-icon {
+			margin-bottom: 6px;
 			margin-right: 7%;
 			max-width: 60px;
 
@@ -541,7 +547,7 @@
 				margin: 0 auto 10px;
 			}
 		}
-		.content {
+		div[data-widget-type="content"] {
 			width: 80%;
 
 			@media @tablet {
@@ -626,8 +632,8 @@ section.features {
 	}
 
 	h2 {
-		font-size: 38px;
-		font-size: 2.23529411765rem;
+		font-size: 36px;
+		font-size: 2.11764705882rem;
 		line-height: 42px;
 
 		margin-bottom: 25px;
@@ -926,7 +932,7 @@ section.features {
 	dt {
 		color: @black;
 		font-size: 24px;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 32px;
 		padding: 18px 0;
 	}
@@ -934,9 +940,6 @@ section.features {
 	// Descriptive Description (Paragraph)
 	dd {
 		color: @dark-grey;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 28px;
 		margin-left: 0;
 		padding-bottom: 18px;
 	}
@@ -976,7 +979,7 @@ section.features {
 	li {
 		margin-bottom: 10px;
 		a {
-			color: lighten(@dark-grey, 10%);
+			color: @dark-grey;
 			text-decoration: none;
 		}
 	}

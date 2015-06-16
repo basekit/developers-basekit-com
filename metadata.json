@@ -2,7 +2,7 @@
     "name": "BaseKit Developer Portal",
     "thumbnail": "thumbnail.png",
     "pageTypes":["home", "templates", "signup", "blogpostlist", "blogpost", "faq"],
-    "widgetVersion": 1,
+    "widgetVersion": 2,
     "colorSwatches":
     {
         "Swatch 1": {
