@@ -30,6 +30,11 @@
 		padding: 0 0 25px 0;
 	}
 
+	@media @mobile {
+		display: none;
+		visibility: hidden;
+	}
+
 	ul {
 		padding-left: 0;
 		list-style: none;
@@ -52,7 +57,8 @@
 	}
 
 	a {
-		font-size: 15px;
+		font-size: 14px;
+		font-weight: 500;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
@@ -204,6 +210,7 @@
 
 		.post-image {
 			height: 400px;
+			margin-bottom: 20px;
 
 			@media @mobile {
 				height: 200px;
@@ -215,7 +222,6 @@
 				background-position: center;
 				display: block;
 				height: 400px;
-				margin-bottom: 30px;
 
 				@media @mobile {
 					height: 200px;
@@ -264,13 +270,14 @@
 
 	.post-image {
 		height: 200px;
+		margin-bottom: 20px;
+
 		.image-link {
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
 			display: block;
 			height: 200px;
-			margin-bottom: 20px;
 		}
 
 		.image {
@@ -283,6 +290,11 @@
 		position: absolute;
 		right: 20px;
 		top: 20px;
+
+		@media @mobile {
+			left: 20px;
+			right: initial;
+		}
 	}
 
 	.timestamp {
@@ -306,7 +318,13 @@
 }
 
 .post-list-footer {
-	margin: 40px 0 0;
+	margin: 40px 0 50px;
+
+	@media @tablet {
+		border-top: 1px solid gainsboro;
+		margin: 30px 0 50px;
+		padding-top: 20px;
+	}
 }
 
 .pagination-list {
@@ -319,15 +337,15 @@
 
 	.button--pagination {
 		border: 1px solid gainsboro;
-		color: darken(gainsboro, 20%);
+		color: lighten(@black, 20%);
 		display: inline-block;
 		padding: 10px 20px;
 		position: relative;
 		.transition(all, 0.5s, ease-in-out);
 
 		&:hover {
-			border-color: darken(gainsboro, 20%);
-			color: darken(gainsboro, 30%);
+			border-color: @black;
+			color: @black;
 		}
 
 		span {
@@ -350,7 +368,11 @@
 
 .blogpost {
 	.post-image {
-		margin-bottom: 25px;
+		margin-bottom: 35px;
+
+		@media @mobile {
+			margin-bottom: 30px;
+		}
 
 		.image-link {
 			background-repeat: no-repeat;
@@ -373,7 +395,13 @@
 	.post-title {
 		font-size: 36px;
 		line-height: 44px;
-		margin-bottom: 18px;
+		margin-bottom: 20px;
+
+		@media @mobile {
+			font-size: 30px;
+			line-height: 40px;
+			margin-bottom: 15px;
+		}
 	}
 
 	.timestamp {
@@ -386,22 +414,17 @@
 		position: absolute;
 		right: 20px;
 		top: 20px;
+
+		@media @mobile {
+			left: 20px;
+			right: initial;
+		}
 	}
 
 	.post-footer {
-		margin: 25px 0;
-	}
-
-	.timestamp {
-		background-color: #ffffff;
-		padding: 5px 10px;
-		font-size: 12px;
-		font-weight: 500;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		position: absolute;
-		right: 20px;
-		top: 20px;
+		border-top: 1px solid gainsboro;
+		margin: 40px 0 0;
+		padding-top: 30px;
 	}
 
 	.post-category, 
@@ -409,13 +432,30 @@
 		display: inline-block;
 
 		p {
-			font-size: 14px;
+			color: @black;
+			display: inline-block;
+			font-size: 15px;
   			font-weight: 500;
 			margin-bottom: 0;
+			margin-right: 3px;
 			text-transform: uppercase;
+
+			&:after {
+				content: ":";
+			}
 		}
 		a {
+			display: inline-block;
+			color: @dark-grey;
+			font-size: 15px;
+			text-transform: uppercase;
+			font-weight: 500;
 			text-decoration: none;
+			.transition(all, 0.5s, ease);
+
+			&:hover {
+				color: @green;
+			}
 		}
 	}
 
@@ -424,6 +464,7 @@
 	}
 
 	.post-tags ul {
+		display: inline-block;
 		padding-left: 0;
 		list-style: none;
 		margin: 0;
@@ -432,6 +473,37 @@
 			display: inline-block;
 			margin-right: 4px;
 		}
+	}
+}
+
+.sharing-links {
+	margin: 12px 0 50px;
+	padding-left: 0;
+	list-style: none;
+
+	li {
+		display: inline-block;
+	}
+
+	button {
+		border: 0;
+		color: white;
+		font-size: 13px;
+		margin-right: 8px;
+		margin-top: 15px;
+		padding: 5px 12px;
+	}
+
+	.js-twitter-btn {
+		background-color: #55acee;
+	}
+
+	.js-facebook-btn {
+		background-color: #3B5998;
+	}
+
+	.js-googleplus-btn {
+		background-color: #f44336;
 	}
 }
 
@@ -461,6 +533,12 @@
 	p {
 		padding-bottom: 15px;
 		margin: 0;
+		line-height: 38px;
+
+		@media @mobile {
+			font-size: 17px;
+			line-height: 35px;
+		}
 		+ hr {
 			margin: 1.5em 0 3em;
 		}
