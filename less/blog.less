@@ -27,7 +27,7 @@
 	max-width: 100%;
 	padding: 35px 0;
 	@media @tablet {
-		padding: 0 0 15px 0;
+		padding: 0 0 25px 0;
 	}
 
 	ul {
@@ -138,8 +138,13 @@
 	border: 1px solid darken(#fafafa, 10%);
 	.border-radius(4px);
 	font-size: 16px;
-	margin: 55px 0 45px;
+	margin: 45px 0;
 	padding: 30px;
+
+	p {
+		font-size: 17px;
+  		line-height: 30px;
+	}
 
 	.button {
 		display: block;
@@ -199,10 +204,27 @@
 
 		.post-image {
 			height: 400px;
-			margin-bottom: 30px;
+
+			@media @mobile {
+				height: 200px;
+			}
+
+			.image-link {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				display: block;
+				height: 400px;
+				margin-bottom: 30px;
+
+				@media @mobile {
+					height: 200px;
+				}
+			}
 
 			.image {
-				max-height: 400px;
+				display: none;
+				visibility: hidden;
 			}
 		}
 
@@ -241,16 +263,20 @@
 	}
 
 	.post-image {
-		background-color: gainsboro;
 		height: 200px;
-		margin-bottom: 20px;
-
 		.image-link {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
 			display: block;
+			height: 200px;
+			margin-bottom: 20px;
 		}
+
 		.image {
-			max-height: 200px;
-		}	
+			display: none;
+			visibility: hidden;
+		}
 	}
 
 	.post-footer {
@@ -324,14 +350,23 @@
 
 .blogpost {
 	.post-image {
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 
 		.image-link {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
 			display: block;
+			height: 400px;
+
+			@media @mobile {
+				height: 200px;
+			}
 		}
 
 		.image {
-			height: 400px;
+			display: none;
+			visibility: hidden;
 		}
 	}
 
