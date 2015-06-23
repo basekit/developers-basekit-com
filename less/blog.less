@@ -171,6 +171,10 @@
 		margin-bottom: 12px;
 		padding: 12px 0 24px;
 
+		&:first-child {
+			padding-top :0;
+		}
+
 		&:last-child {
 			border-bottom: 0;
 		}
@@ -286,8 +290,8 @@
 		}
 
 		.post-title {
-			font-size: 36px;
-			line-height: 46px;
+			font-size: 34px;
+			line-height: 44px;
 
 			@media @mobile {
 				font-size: 30px;
@@ -309,9 +313,9 @@
 	}
 
 	.post-title {
-		font-size: 25px;
+		font-size: 24px;
 		font-weight: 600;
-		line-height: 32px;
+		line-height: 31px;
 		margin-bottom: 15px;
 	}
 
@@ -391,6 +395,10 @@
 }
 
 .pagination-list {
+	.flex-display;
+	.flex-wrap(nowrap);
+	.justify-content(space-between);
+	
 	padding-left: 0;
 	list-style: none;
 
