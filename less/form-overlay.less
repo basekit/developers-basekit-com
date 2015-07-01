@@ -117,7 +117,8 @@
 
 
 // Form Section
-.signup-form {
+.signup-form,
+.reset-password {
 	background-color: @black;
 	h2 {
 		margin-bottom: 6px;
@@ -128,6 +129,13 @@
 		@media @mobile {
 			padding-bottom: 15px!important;
 		}
+	}
+
+	fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
 	}
 
 	// Form
@@ -209,6 +217,59 @@
 		margin-top: 8px;
 		padding: 16px 20px;
 		width: 100%;
+	}
+}
+
+// Reset Password
+.reset-password {
+	h2 {
+		color: @white;
+		margin-bottom: 30px;
+	}
+	p a {
+		color: fade(@white, 75%);
+		display: block;
+		margin-top: 15px;
+		text-decoration: none;
+	}
+}
+
+.resetpassword {
+	.password-mask-toggle {
+		width: auto;
+		display: inline-block;
+		font-size: 12px;
+		text-transform: uppercase;
+		background-color: transparent;
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		margin: 0;
+		padding: 4px 12px 2px;
+		border: 1px solid gainsboro;
+		.border-radius(4px);
+		letter-spacing: 1px;
+		color: @grey-dark;
+	}
+
+	button[type="submit"] {
+		.border-radius(4px);
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		padding: 18px 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+		.transition (all, .5s, ease-in);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		background-color: @green;
+		color: white;
+		text-shadow: 0px 1px 0px rgb(84, 175, 153, 1);
+		&:hover {
+			background-color: darken(@green, 8%);
+		}
 	}
 }
 
