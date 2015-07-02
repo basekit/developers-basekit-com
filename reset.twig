@@ -1,0 +1,19 @@
+<!-- DEVELOPER LOGIN OVERLAY -->
+
+<div id="reset" class="dev-overlay login-form">
+
+	<a href="#close" class="icon-close"></a>
+	
+	<div class="container vertical-center">
+
+		<!-- Login Header -->
+		<div class="row">
+			<div class="twelve columns">
+				<h2>Forgotten password?</h2>
+				 {{widget('forgottenpassword', 'forgottenpassword', {'passwordResetPage':'password-reset','text':'Submit'})|raw}}
+				<p>Remembered your password? Click <a href="#login">here</a> to sign in.</p>
+			</div>
+		</div>
+
+	</div>
+</div>
