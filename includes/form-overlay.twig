@@ -49,7 +49,28 @@
 				<h2>Log in to your site</h2>
 				{{widget('userlogin','userlogin',{})|raw}}
 				<!--<p class="forgotten-password">Don't have an account? Click <a href="#signup">here</a> to sign up for free.</p>-->
-				<p>Forgot your password? Click <a href="/reset">here</a> to request a new one.</p>
+				<p>Forgot your password? Click <a href="#reset">here</a> to request a new one.</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<!-- DEVELOPER LOGIN OVERLAY -->
+
+<div id="reset" class="dev-overlay login-form">
+
+	<a href="#close" class="icon-close"></a>
+	
+	<div class="container vertical-center">
+
+		<!-- Login Header -->
+		<div class="row">
+			<div class="twelve columns">
+				<h2>Forgotten password?</h2>
+				 {{widget('forgottenpassword', 'forgottenpassword', {'passwordResetPage':'password-reset','text':'Submit'})|raw}}
+				<p>Remembered your password? Click <a href="#login">here</a> to sign in.</p>
 			</div>
 		</div>
 
