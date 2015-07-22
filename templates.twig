@@ -5,17 +5,7 @@
 
 <!-- HEADER & NAVIGATION -->
 
-{% include 'includes/header-small.twig' %}
-
-<!-- Feature -->
-	<div class="feature small alt-img">
-	    <div class="feature-content">
-	        <div class="container">
-	        	{{widget('content', 'feature-heading-templates', {"content":'<h1>Select your template</h1><h4>Tour through our template library, select the one you love and get building. Have the freedom to switch templates at any time.</h4>'})|raw}}
-	        </div>
-	    </div>
-	</div>
-</div>
+{% include 'includes/header.twig' %}
 
 
 
@@ -27,151 +17,211 @@
 
 <!-- MAIN SECTION -->
 
-<div role="main" class="main">
+<div role="main" class="main template-picker">
 
-	<div class="container">
+	<div class="template-container">
+
+    <div class="template-header">
+        <div class="container">
+            {{widget('content', 'feature-heading-templates', {"content":'<h1>Select your template</h1><h4>Tour through our template library, select the one you love and get building. Have the freedom to switch templates at any time.</h4>'})|raw}}
+        </div>
+    </div>
 
 		<section class="template-list">
 
+            <div class="template">
+                <div class="template-overlay-container">
+
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/trivia/trivia-screenshot.jpg" alt="Trivia">
+
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-trivia" class="template-preview-link" id="Trivia">View Template</a>
+                    </div>
+                </div>
+            </div>
+
 			<div class="template">
-				<a href="/signup?theme=1080" class="template-link" target="_parent">
-	                <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/masonry/thumbnail.png" alt="Masonry">
-	                <h5 class="template-name">Masonry</h5>
-	            </a>
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/masonry/masonry-screenshot.jpg" alt="Masonry">
+
+                	<div class="template-overlay  vertical-center">
+	                	<a href="template-previews/preview-masonry" class="template-preview-link" id="masonry">View Template</a>
+                	</div>
+                </div>
             </div>
 
             <div class="template">
-                <a href="/signup?theme=1082" class="template-link" target="_parent">
-	                <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/ampersand/thumbnail.png" alt="Ampersand">
-	                <h5 class="template-name">Ampersand</h5>
-	            </a>
+                <div class="template-overlay-container">
+
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/sign/sign-screenshot.jpg" alt="Sign">
+
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-sign" class="template-preview-link" id="Sign">View Template</a>
+                    </div>
+                </div>
             </div>
 
             <div class="template">
-		        <a href="/signup?theme=770" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/roots/roots.png" alt="Roots">
-		            <h5 class="template-name">Roots</h5>
-		        </a>
-		    </div>
+                <div class="template-overlay-container">
 
-		    <div class="template">
-		        <a href="/signup?theme=558" class="template-link" target="_parent">
-		        	<img class="template-thumbnail" src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/unknown/unknown.png" alt="">
-		            <h5 class="template-name">Unknown</h5>
-		        </a>
-		    </div>
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/balkan/balkan-screenshot.jpg" alt="Balkan">
 
-			<div class="template">
-				<a href="/signup?theme=1083" class="template-link" target="_parent">
-	                <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/abroad/thumbnail.png" alt="abroad">
-	                <h5 class="template-name">Abroad</h5>
-	            </a>
-			</div>
-
-			<div class="template">
-                <a href="/signup?theme=556" class="template-link" target="_parent">
-	                <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/specify/specify.png" alt="specify">
-	                <h5 class="template-name">Specify</h5>
-	            </a>
-             </div>
-
-		    <div class="template">
-		        <a href="/signup?theme=795" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/on-the-shore/on-the-shore.png" alt="">
-		            <h5 class="template-name">On the Shore</h5>
-		        </a>
-		    </div>
-
-		    <div class="template">
-		        <a href="/signup?theme=564" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/verbier/verbier.png" alt="">
-		            <h5 class="template-name">Verbier</h5>
-		        </a>
-		    </div>
-
-		    <div class="template">
-	             <a href="/signup?theme=1081" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/prism/thumbnail.png" alt="Prism">
-		            <h5 class="template-name">Prism</h5>
-		        </a>
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-balkan" class="template-preview-link" id="Balkan">View Template</a>
+                    </div>
+                </div>
             </div>
 
-		    <div class="template">
-		        <a href="/signup?theme=561" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/nordic/nordic.png" alt="">
-		            <h5 class="template-name">Nordic</h5>
-		        </a>
-		    </div>
+            <div class="template">
+                <div class="template-overlay-container">
 
-		    <div class="template">
-		        <a href="/signup?theme=955" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/views/views.png" alt="">
-		            <div class="template-name">Views</div>
-		        </a>
-		    </div>
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/skate/skate-screenshot.jpg" alt="Skate">
 
-		    <div class="template">
-                <a href="/signup?theme=71" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/monday/monday.png" alt="">
-		            <h5 class="template-name">Monday</h5>
-		        </a>
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-skate" class="template-preview-link" id="Skate">View Template</a>
+                    </div>
+                </div>
             </div>
 
-		    <div class="template">
-                <a href="/signup?theme=443" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/neue/neue.png" alt="Neue">
-		            <h5 class="template-name">Neue</h5>
-		        </a>
+            <div class="template">
+                <div class="template-overlay-container">
+
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/scribe/scribe-screenshot.jpg" alt="Scribe">
+
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-scribe" class="template-preview-link" id="Scribe">View Template</a>
+                    </div>
+                </div>
             </div>
 
-		    <div class="template">
-		        <a href="/signup?theme=674" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/quest/quest.png" alt="">
-		            <h5 class="template-name">Quest</h5>
-		        </a>
-		    </div>
+            <div class="template">
+                <div class="template-overlay-container">
 
-		    <div class="template">
-		        <a href="/signup?theme=559" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/transition/transition.png" alt="">
-		            <h5 class="template-name">Transition</h5>
-		        </a>
-		    </div>
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/facet/facet-screenshot.jpg" alt="Facet">
 
-		    <div class="template">
-		        <a href="/signup?theme=779" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/explore/explore.png" alt="">
-		            <h5 class="template-name">Explore</h5>
-		        </a>
-		    </div>
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-facet" class="template-preview-link" id="Facet">View Template</a>
+                    </div>
+                </div>
+            </div>
 
-		    <div class="template">
-		        <a href="/signup?theme=562" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/oliver/oliver.png" alt="">
-		            <h5 class="template-name">Oliver Thames</h5>
-		        </a>
-		    </div>
+            <div class="template">
+                <div class="template-overlay-container">
 
-		    <div class="template">
-		        <a href="/signup?theme=990" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/techdesk/techdesk.png" alt="">
-		            <h5 class="template-name">Techdesk</h5>
-		        </a>
-		    </div>
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/sullivan/sullivan-screenshot.png" alt="Sullivan">
 
-		    <div class="template">
-		        <a href="/signup?theme=615" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/14ee2ab/templates/spiritus/spiritus.png" alt="">
-		            <h5 class="template-name">Spiritus</h5>
-		        </a>
-		    </div>
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-sullivan" class="template-preview-link" id="Sullivan">View Template</a>
+                    </div>
+                </div>
+            </div>
 
-		    <div class="template">
-		        <a href="/signup?theme=439" class="template-link" target="_parent">
-		        	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/owltemplate/owltemplate.png" alt="">
-		            <div class="template-name">Owl</div>
-		        </a>
-		    </div>
+            <div class="template">
+                <div class="template-overlay-container">
+
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/apparel/apparel-screenshot.jpg" alt="Apparel">
+
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-apparel" class="template-preview-link" id="Apparel">View Template</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template">
+                <div class="template-overlay-container">
+
+                    <img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/unite/unite-screenshot.jpg" alt="Unite">
+
+                    <div class="template-overlay vertical-center">
+                        <a href="template-previews/preview-unite" class="template-preview-link" id="Unite">View Template</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="template">
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/nineteen-twenties/screenshot.jpg" alt="Nineteen Twenties">
+
+                	<div class="template-overlay">
+	                	<a href="#Nineteen-Twenties" class="template-preview-link" id="Nineteen-Twenties">View Template</a>
+	                	<a href="/signup?theme=1079" class="template-preview-link" target="_parent">Choose Template</a>
+                	</div>
+                </div>
+            </div>-->
+
+            <!--<div class="template">
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/alpha-studio/alphastudio-screenshot.jpg" alt="Alpha Studio">
+
+                	<div class="template-overlay">
+	                	<a href="#Alpha-Studio" class="template-preview-link" id="Alpha-Studio">View Template</a>
+	                	<a href="/signup?theme=1121" class="template-preview-link" target="_parent">Choose Template</a>
+                	</div>
+                </div>
+            </div>-->
+
+            <!--<div class="template">
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/sense/sense-screenshot.jpg" alt="Sense">
+
+                	<div class="template-overlay">
+	                	<a href="#Sense" class="template-preview-link" id="Sense">View Template</a>
+	                	<a href="/signup?theme=1137" class="template-preview-link" target="_parent">Choose Template</a>
+                	</div>
+                </div>
+            </div>-->
+
+            <!--<div class="template">
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/himalaya/himalaya-screenshot.jpg" alt="Himalaya">
+
+                	<div class="template-overlay">
+	                	<a href="#Himalaya" class="template-preview-link" id="Himalaya">View Template</a>
+	                	<a href="/signup?theme=1273" class="template-preview-link" target="_parent">Choose Template</a>
+                	</div>
+                </div>
+            </div>-->
+
+            <!--<div class="template">
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/ampersand/screenshot.jpg" alt="Ampersand">
+
+                	<div class="template-overlay">
+	                	<a href="#Ampersand" class="template-preview-link" id="Ampersand">View Template</a>
+	                	<a href="/signup?theme=1082" class="template-preview-link" target="_parent">Choose Template</a>
+                	</div>
+                </div>
+            </div>-->
+
+            <!--<div class="template">
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/abroad/screenshot.jpg" alt="Abroad">
+
+                	<div class="template-overlay">
+	                	<a href="#Abroad" class="template-preview-link" id="Abroad">View Template</a>
+	                	<a href="/signup?theme=1083" class="template-preview-link" target="_parent">Choose Template</a>
+                	</div>
+                </div>
+            </div>-->
+
+            <!--<div class="template">
+				<div class="template-overlay-container">
+
+                	<img src="http://d35onr1h4eb0bw.cloudfront.net/4d11ffe/templates/prism/prism-screenshot.jpg" alt="Prism">
+
+                	<div class="template-overlay">
+	                	<a href="#Prism" class="template-preview-link" id="Prism">View Template</a>
+	                	<a href="/signup?theme=1081" class="template-preview-link" target="_parent">Choose Template</a>
+                	</div>
+                </div>
+            </div>-->
 
 		</section>
 
@@ -189,6 +239,9 @@
 
 
 {% block scripts %}
+
+    <script src="{{asset('css/template-list.css')}}"></script>
+    <script src="{{asset('js/template-list.js')}}"></script>
 
 	<!-- IMAGESLOADED -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
