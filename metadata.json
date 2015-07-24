@@ -1,7 +1,7 @@
 {
     "name": "BaseKit Developer Portal",
     "thumbnail": "thumbnail.png",
-    "pageTypes":["home", "templates", "signup", "blogpostlist", "blogpost", "faq", "password-reset", "template-previews/preview-apparel", "template-previews/preview-balkan"],
+    "pageTypes":["home", "templates", "signup", "blogpostlist", "blogpost", "faq", "password-reset", "template-previews/preview-apparel", "template-previews/preview-balkan", "template-previews/preview-facet", "template-previews/preview-masonry", "template-previews/preview-scribe", "template-previews/preview-sign", "template-previews/preview-skate", "template-previews/preview-sullivan", "template-previews/preview-trivia", "template-previews/preview-unite"],
     "widgetVersion": 2,
     "colorSwatches":
     {
