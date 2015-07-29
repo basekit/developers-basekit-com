@@ -1,0 +1,34 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+<!-- HEADER & NAVIGATION -->
+
+{% include 'includes/header.twig' %}
+
+
+<div role="main" class="main template-preview">
+
+    <div class="container template-header">
+        <div class="row">
+
+            <div class="eight columns">
+                {{widget('content', 'template-header-himalaya', {"content":'<h1>Himalaya</h1><a href="/templates" class="template-return-link">Return to the template designs</a>'})|raw}}
+            </div>
+
+            <div class="four columns text-right">
+                <a href="/signup?theme=1273" target="_parent" class="button large green template-select-link">Use Template</a>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="template-iframe">
+        <iframe src="//himalaya.bksites.net" width="100%" height="1024px"></iframe>
+    </section>
+
+</div>
+
+
+{% endblock %}
