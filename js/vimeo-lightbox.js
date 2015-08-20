@@ -1,7 +1,7 @@
 $('body')
 .on('click', '.vimeo-launch', function () {
   var videoID = $(this).data('vimeo-id'),
-      $video = '<div id="vimeo-pop-container"><div><span class="vimeo-close"></span><iframe src="http://player.vimeo.com/video/' + videoID + '/?title=1&amp;byline=1&amp;portrait=0&amp;autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+      $video = '<div id="vimeo-pop-container"><div><span class="vimeo-close"></span><iframe src="//player.vimeo.com/video/' + videoID + '/?title=1&amp;byline=1&amp;portrait=0&amp;autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
   $('body').append($video);
 } )
 
