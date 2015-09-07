@@ -33,6 +33,7 @@
 @import "@{templateLocal}/less/slider.less";      						// Slider Styles
 @import "@{templateLocal}/less/template-list.less";     				// Template Picker List
 @import "@{templateLocal}/less/blog.less";								// Blog
+@import "@{templateLocal}/less/pricing.less";								// Pricing
 
 
 
@@ -315,6 +316,25 @@ body {
 		@media @mobile {
 			height: 400px;
 			padding: 70px 0 20px;
+		}
+	}
+
+	// Medium Feature
+	&.medium .feature-content {
+		height: 300px;
+
+		@media @mobile {
+			height: 250px;
+		}
+
+		h1 {
+			font-size: 2.8rem;
+		}
+
+		h4 {
+			font-size: 1.1rem;
+			font-weight: 400;
+			line-height: 1.8;
 		}
 	}
 

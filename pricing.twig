@@ -1,0 +1,109 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+
+<!-- HEADER & NAVIGATION -->
+
+{% include 'includes/header-small.twig' %}
+
+<!-- Feature -->
+	<div class="feature medium alt-img">
+	    <div class="feature-content">
+	        <div class="container">
+	        	{{widget('content', 'feature-heading-templates', {"content":'<h1>Pricing table</h1><h4>Stuck at the first hurdle, have some questions about BaseKit.</h4>'})|raw}}
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
+
+<!-- MAIN SECTION -->
+
+<div role="main" class="main pricing-body">
+	<div class="container">
+
+		<div class="pricing-table">
+
+			<div class="pricing-category free">
+				<header class="pricing-details">
+					<h5 class="pricing-title">Free</h5>
+					<h3 class="pricing-price">£0<span class="pricing-term"></span></h3>
+				</header>
+
+				<div class="pricing-benefits">
+					<ul>
+						<li>Web builder</li>
+						<li>Blog</li>
+						<li>Ecommerce</li>
+						<li>10 pages</li>
+						<li class="not-included">Map custom domain</li>
+						<li class="not-included">Unlimited pages</li>
+						<li class="not-included">FREE domain</li>
+						<li class="pricing-select">
+							<!--<a href="#" class="button green">Choose plan</a>-->
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="pricing-category basic">
+				<header class="pricing-details">
+					<h5 class="pricing-title">Basic</h5>
+					<h3 class="pricing-price">£70</h3>
+				</header>
+
+				<div class="pricing-benefits">
+					<ul>
+						<li>Web builder</li>
+						<li>Blog</li>
+						<li>Ecommerce</li>
+						<li>10 pages</li>
+						<li>Map custom domain</li>
+						<li class="not-included">Unlimited pages</li>
+						<li class="not-included">FREE domain</li>
+						<li class="pricing-select">
+							<!--<a href="#" class="button green">Choose plan</a>-->
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="pricing-category highlighted">
+				<header class="pricing-details">
+					<h5 class="pricing-title">Premium</h5>
+					<h3 class="pricing-price">£120</h3>
+				</header>
+
+				<div class="pricing-benefits">
+					<ul>
+						<li>Web builder</li>
+						<li>Blog</li>
+						<li>Ecommerce</li>
+						<li>10 pages</li>
+						<li>Map custom domain</li>
+						<li>Unlimited pages</li>
+						<li>FREE domain</li>
+						<li class="pricing-select">
+							<!--<a href="#" class="button green">Choose plan</a>-->
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+
+
+<!-- FOOTER -->
+
+{% include 'includes/footer.twig' %}
+
+{% endblock %}
