@@ -74,10 +74,14 @@
 		border-left: 1px solid rgba(0,0,0, 0.065);
 	}
 
-	ul {
+	.pricing-benefits {
 		border-right: 1px solid rgba(0,0,0, 0.065);
+	}
+
+	ul {
 		margin: 0;
-		padding: 1.25em 0 0.5em;
+		padding: 2em 4em 1.75em;
+		text-align: left;
 	}
 
 	li {
@@ -85,17 +89,43 @@
 		font-size: 17px;
 		font-weight: 300;
 		list-style: none;
-		padding: 0.65em 0.25em;
+		padding: 0.65em 0.25em 0.65em 1.75em;
+		position: relative;
+
+		&.included:before {
+			content: "";
+			background-color: transparent;
+
+			/* position the checkbox */
+			position: absolute;
+			left: 0;
+			top: 20px;
+
+			/* setting the checkbox */
+			/* short arm */
+			width: 5px;
+			border-bottom: 3px solid @green;
+			/* long arm */
+			height: 11px;
+			border-right: 3px solid @green;
+
+			/* rotate the mirrored L to make it a checkbox */
+			transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg)
+		}
 
 		&.not-included {
-			color: darken(@grey, 20%);
+			color: darken(@grey, 25%);
 
 			&:before {
 				content: "\00d7";
-				font-size: 15px;
-				top: -2px;
+				font-size: 21px;
+				left: 0;
+				top: 7px;
 				padding-right: 8px;
-				position: relative;
+				position: absolute;
 			}
 		}
 	}
@@ -146,23 +176,33 @@
 
 .pricing-price {
 	color: @white;
+	display: inline-block;
 	font-size: 3rem;
-	font-weight: 300;
+	font-weight: 500;
 	line-height: 1;
 	margin-bottom: 0;
-	padding: 0.5em 0.25em;
+	padding: 0.75em 0 0.05em 0.25em;
 	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-title {
 	background-color: #464A4E;
 	color: @white;
-	letter-spacing: 1px;
-	font-size: 15px;
-	font-weight: 400;
+	letter-spacing: 2px;
+	font-size: 14px;
+	font-weight: 500;
 	padding: 0.75em 0.25em 0.5em;
 	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
 	text-transform: uppercase;
+}
+
+.pricing-timeline {
+	color: darken(@grey, 20%);
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
+	padding: 0 0.25em 2.35em 0;
 }
 
 .pricing-benefits {
@@ -179,15 +219,10 @@
 	}
 }
 
-footer.pricing-select {
-	padding: 0.5em 1.5em 1.5em;
-	border-left: 1px solid rgba(0,0,0,0.1);
-	border-right: 1px solid rgba(0,0,0,0.1);
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-
-	.button {
-		display: block;
-		padding: 1em 0.75em;
-	}
+a.pricing-select {
+	.border-radius(35px);
+	display: block;
+	margin: 0 auto 2.5em;
+	max-width: 65%;
+	padding: 15px;
 }
-
