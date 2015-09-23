@@ -4,15 +4,60 @@
 
 
 
-<!-- HEADER & NAVIGATION -->
+<div class="header-feature">
 
-{% include 'includes/header-small.twig' %}
+	<header class="header" role="banner">
+	    <div class="container">
+	    	<div class="row">
+
+	    	<!-- Logo -->
+		        <div class="three columns">
+	                <a href="/home" class="logo">
+	                	<img src="{{asset('images/basekit-logo.svg')}}" alt="BaseKit">
+	                </a>
+		        </div>
+
+		        <!-- Mobile Navigation Toggle -->
+		        <div class="nav-toggle toggle"><span></span></div>
+
+		        <!-- Navigation -->
+		        <div class="nine columns">
+		        	<nav class="nav">
+			            <ul>
+			                <li><a target="_blank" href="http://docs.basekit.com/">Docs</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a target="_blank" href="http://knowledge.basekit.com/">Forum</a></li>
+							<li><a href="/pricing">Pricing</a></li>
+							<li><a href="/faq">FAQ</a></li>
+							<li><a href="#login" class="button small outline">Login</a></li>
+							<li class="currency-selector">
+								<select>
+									<option value="gbp">GBP: Pound</option>
+									<option value="eur">EUR: Euro</option>
+									<option value="usd">USD: Dollar</option>
+								</select>
+							</li>
+			            </ul>
+		            </nav>
+
+		        </div>
+
+		    </div>
+	    </div>
+	</header>
+
+
+
+<!-- SIGNUP / LOGIN OVERLAY -->
+
+{% include 'includes/form-overlay.twig' %}
+
 
 <!-- Feature -->
-	<div class="feature medium alt-img">
+	<div class="feature medium pricing-img">
 	    <div class="feature-content">
 	        <div class="container">
-	        	{{widget('content', 'feature-heading-templates', {"content":'<h1>Pricing table</h1><h4>Stuck at the first hurdle, have some questions about BaseKit.</h4>'})|raw}}
+	        	{{widget('content', 'feature-heading-templates', {"content":'<h1>Pricing</h1><h4>Start with your free account and upgrade at any time within the editor.</h4>'})|raw}}
 	        </div>
 	    </div>
 	</div>
@@ -30,7 +75,7 @@
 			<div class="pricing-category free">
 				<header class="pricing-details">
 					<h5 class="pricing-title">Free</h5>
-					<h3 class="pricing-price">£0</h3>
+					<h3 class="pricing-price  free-package">&pound;0</h3>
 					<h5 class="pricing-timeline">/mo</h5>
 				</header>
 
@@ -51,8 +96,8 @@
 
 			<div class="pricing-category basic">
 				<header class="pricing-details">
-					<h5 class="pricing-title">Business</h5>
-					<h3 class="pricing-price">£7</h3>
+					<h5 class="pricing-title">Basic</h5>
+					<h3 class="pricing-price  basic-package">&pound;7</h3>
 					<h5 class="pricing-timeline">/mo</h5>
 				</header>
 
@@ -72,8 +117,8 @@
 
 			<div class="pricing-category highlighted">
 				<header class="pricing-details">
-					<h5 class="pricing-title">Premium</h5>
-					<h3 class="pricing-price">£12</h3>
+					<h5 class="pricing-title">Business</h5>
+					<h3 class="pricing-price  business-package">&pound;12</h3>
 					<h5 class="pricing-timeline">/mo</h5>
 				</header>
 

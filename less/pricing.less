@@ -11,6 +11,56 @@
 	background-color: @grey;
 }
 
+.currency-selector {
+	border: 2px solid fade(@white, 50%)!important;
+	height: 40px;
+	width: 150px;
+	line-height: 20px;
+	.border-radius(4px);
+	margin-left: 15px;
+	position: relative;
+
+	@media @tablet {
+		line-height: initial;
+		margin: 0 0 25px;
+		height: auto;
+		width: 100%;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 48%;
+		right: 12px;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid @white;
+	}
+
+	select {
+		-webkit-appearance: none;
+		background: transparent;
+		border: none;
+		outline: none;
+		padding: 15px 35px 15px 15px;
+		.border-radius(0);
+		cursor: pointer;
+		font-size: 13px;
+		color: @white;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		-moz-appearance: none;
+		text-overflow: '';
+		line-height: 12px;
+
+		@media @tablet {
+			line-height: initial;
+			padding: 15px;
+			width: 100%;
+		}
+	}
+}
+
 
 // 	Pricing table
 // ------------------
