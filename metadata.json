@@ -1,7 +1,7 @@
 {
     "name": "BaseKit Developer Portal",
     "thumbnail": "thumbnail.png",
-    "pageTypes":["home", "templates", "signup", "blogpostlist", "blogpost", "faq", "pricing", "password-reset", "template-previews/abroad", "template-previews/ampersand", "template-previews/apparel", "template-previews/balkan", "template-previews/couture", "template-previews/crane", "template-previews/facet", "template-previews/himalaya", "template-previews/journal", "template-previews/masonry", "template-previews/odense", "template-previews/people", "template-previews/prism", "template-previews/scribe", "template-previews/sense", "template-previews/sign", "template-previews/skate", "template-previews/sullivan", "template-previews/trivia", "template-previews/unite", "template-previews/zest"],
+    "pageTypes":["home", "templates", "signup", "blogpostlist", "blogpost", "faq", "pricing", "password-reset", "template-previews/abroad", "template-previews/ampersand", "template-previews/apparel", "template-previews/balkan", "template-previews/couture", "template-previews/crane", "template-previews/facet", "template-previews/himalaya", "template-previews/journal", "template-previews/masonry", "template-previews/odense", "template-previews/people", "template-previews/prism", "template-previews/scribe", "template-previews/sense", "template-previews/sign", "template-previews/skate", "template-previews/sullivan", "template-previews/trivia", "template-previews/unite", "template-previews/zest", "template-previews/timeline"],
     "widgetVersion": 2,
     "colorSwatches":
     {
