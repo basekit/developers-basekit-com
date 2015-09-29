@@ -11,10 +11,7 @@
 		<meta http-equiv="content-language" content="{{ page.seoLang }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {% if site.favicon %}
-			<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
-			<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
-		{% endif %}
+        {% include "includes/favicon.twig" %}
 
         <!-- TYPEKIT FONTS -->
 
