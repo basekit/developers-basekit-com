@@ -39,9 +39,52 @@
 	}
 }
 
+/*.template-header .container {
+	.flex-display;
+	.align-items(center);
+
+	.five {
+		text-align: right;
+	}
+}*/
+
 .template-container {
 	margin: 0 auto;
 	max-width: 90%;
+}
+
+
+// 	Template category list
+// ------------------------
+
+.template-category {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+	margin: 10px 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-align: center;
+	max-width: 100%;
+
+	li {
+		border-radius: 25px;
+		display: inline-block;
+		padding: 2px 12px;	
+	}
+
+	li a {
+		color: @black;
+		text-decoration: none;
+	}
+
+	li a.selected {
+		background-color: @green;
+		color: @white;
+	}
 }
 
 
