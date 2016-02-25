@@ -9,6 +9,10 @@
 
 .pricing-body {
 	background-color: @grey;
+
+	.container {
+		max-width: 1400px;
+	}
 }
 
 .currency-selector {
@@ -92,9 +96,13 @@
 	left: 0;
 	top: -10em;
 
-	max-width: 1024px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 19px 0 0;
+
+	@media only screen and (max-width: 1080px) {
+		.flex-wrap(wrap);
+	}
 
 	@media @tablet {
 		.flex-wrap(wrap);
@@ -107,12 +115,16 @@
 		border-bottom: 1px solid rgba(0,0,0,0.065);
 		flex-grow: 1;
 		display: inline-block;
-		width: 33.33%;
+		width: 25%;
 
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		text-align: center;
+
+		@media only screen and (max-width: 1080px) {
+			width: 50%;
+		}
 
 		@media @tablet {
 			border-bottom: 0;
@@ -130,7 +142,7 @@
 
 	ul {
 		margin: 0;
-		padding: 2em 4em 1.75em;
+		padding: 2em 3em 1.75em;
 		text-align: left;
 	}
 
@@ -236,6 +248,27 @@
 	margin-bottom: 0;
 	padding: 0.75em 0 0.05em 0.25em;
 	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+
+	&.reseller-package {
+		padding-top: 0.5em;
+	}
+}
+
+.reseller-package +.pricing-timeline {
+	padding-bottom: 12px;
+}
+
+.pricing-fee {
+	display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #F5E8DE;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding: 0px 0 27px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .pricing-title {
