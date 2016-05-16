@@ -87,9 +87,11 @@ body {
 	&.green {
 		background-color: @green;
 		color: white;
-		text-shadow: 0px 1px 0px rgb(84, 175, 153, 1);
+		text-shadow: 0px 1px 0px rgb(92, 177, 92, 1);
+		.gradient(#71c371, @green);
 		&:hover {
-			background-color: darken(@green, 8%);
+			background-color: darken(@green, 3%);
+			.gradient(@green, darken(@green, 3%));
 		}
 	}
 
@@ -202,7 +204,7 @@ body {
 		line-height: 65px;
 		padding: 0;
 		&.button.outline {
-			background-color: @orange;
+			background-color: @blue;
 			border: none;
 			color: @white;
 			display: block;
@@ -312,12 +314,7 @@ body {
 
 	// Large Feature
 	&.large .feature-content {
-		height: 550px;
-
-		@media @mobile {
-			height: 400px;
-			padding: 70px 0 20px;
-		}
+		height: 100vh;
 	}
 
 	// Medium Feature
@@ -356,6 +353,8 @@ body {
 	// Homepage Feature Image
 	&.home-img {
 		background: image("/images/backgrounds/feature-bg.jpg") @black no-repeat center;
+		height: 100vh;
+		background-size: cover;
 	}
 
 	// Alternate Feature Image
@@ -415,7 +414,6 @@ body {
 		-webkit-justify-content: center;
 		-ms-flex-pack: center;
 		justify-content: center;
-		padding: 80px 0 20px;		
 		z-index: 1;
 	}
 
@@ -946,7 +944,7 @@ section.features {
 
 	// Section Titles
 	h5 {
-		background-color: @orange;
+		background-color: @blue;
 		color: white;
 		display: inline-block;
 		font-size: 13px;
