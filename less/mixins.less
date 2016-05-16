@@ -18,8 +18,8 @@
 @grey: #f8f8f8;
 @dark-grey: #939393;
 @black: #2f3437;
-@green: #5fc7ae;
-@orange: #ff8932;
+@green: #5cb15c;
+@blue: #1068c0;
 
 
 // 	Assortment of mixins
@@ -113,4 +113,18 @@
       -ms-align-items: @align;
        -ms-flex-align: @align;
           align-items: @align;
+}
+
+// Gradient
+.gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.gradient--green {
+    .gradient(#71c371, @green);
 }
