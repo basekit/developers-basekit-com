@@ -20,10 +20,6 @@ $( ".business").click(function() {
     $( ".business .pricing-benefits" ).toggleClass( "open" );
 });
 
-$( ".highlighted").click(function() {
-    $( ".highlighted .pricing-benefits" ).toggleClass( "open" );
-});
-
 
 // Pricing Selector
 
