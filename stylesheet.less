@@ -315,6 +315,10 @@ body {
 	// Large Feature
 	&.large .feature-content {
 		height: 100vh;
+		@media @mobile {
+			height: auto;
+			min-height: 100vh;
+		}
 	}
 
 	// Medium Feature
@@ -355,6 +359,10 @@ body {
 		background: image("/images/backgrounds/feature-bg.jpg") @black no-repeat center;
 		height: 100vh;
 		background-size: cover;
+		@media @mobile {
+			height: auto;
+			min-height: 100vh;
+		}
 	}
 
 	// Alternate Feature Image
@@ -419,6 +427,7 @@ body {
 
 	.container {
 		position: initial;
+		padding: 89px 0;
 	}
 
 	// Follow us link
